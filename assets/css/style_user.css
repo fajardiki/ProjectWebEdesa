@@ -1,0 +1,60 @@
+html {
+	position: relative;
+	font-size: 1rem;
+}
+
+
+/*Header*/
+#img-logo .img-fluid {
+    border-radius: 5px;
+}
+#headrow {
+	padding: 10px;
+}
+
+#text-header {
+	color: #fff;
+}
+/*Akhir Header*/
+
+/*Navbar*/
+
+#navbar {
+	margin-top: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+}
+
+#item-right {
+	float: right;
+}
+/*Akhir Navbar*/
+
+/*Isi*/
+	/*Slide Show*/
+	.carousel {
+		margin-top: 5px;
+	}
+
+	.carousel .img-c {
+		height: 450px;
+		overflow-wrap: unset;
+	}
+	/*Akhir Slide*/
+
+	/*Pengumuman*/
+	.pengumuman {
+		margin-top: 15px;
+	}
+
+	#pengumuman_title {
+		text-align: center;
+	}
+	/*Akhir Pengumuman*/
+/*Akhir Isi*/
+/*Footer*/
+
+footer {
+	background-color: #aaa;
+}
