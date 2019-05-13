@@ -18,7 +18,7 @@
 			if (isset($btn)) {
 				$user = $this->input->post("username");
 				$pass = $this->input->post("password");
-				$cekk = $this->m_user->login_warga($user, $pass);
+				$cekk = $this->m_user->login_admin($user, $pass);
 				if ($cekk) {
 					$this->session->set_userdata(array('user'=>$user));
 					redirect('c_dasbord');
