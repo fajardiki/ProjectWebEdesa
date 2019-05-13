@@ -80,7 +80,8 @@
 	            		</div>
 	            		<div class="row">
 	            			<div class="col">
-	            				<p>Fajar Siddiqi</p>
+	            				<p>Fajar Siddiqi putu sa'ed</p>
+	            				<p>Haiiiii iii</p>
 	            			</div>
 	            		</div>
 	            	</div>
