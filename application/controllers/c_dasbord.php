@@ -15,6 +15,7 @@
 				'foot'=>'v_footer',
 				'slideshow'=>$this->m_user->getslideshow()
 			);
+
 			$this->load->view('v_dasbord',$data);
 		}
 	}

@@ -37,7 +37,7 @@
 	              Pengajuan
 	            </a>
 	            <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdownMenuLink">
-	              <a class="dropdown-item" href="../surat/permohonan-offline/fasilitas.php">Pengajuan Offline</a>
+	              <a class="dropdown-item" href="<?php echo base_url('c_surat') ?>">Pengajuan Offline</a>
 	              <a class="dropdown-item" href="../surat/permohonan-online/permohonan_masuk.php">Pengajuan Online</a>
 	              <a class="dropdown-item" href="statuspengajuan_admin.php">Status Pengajuan</a>
 	            </div>

@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 	
 	/**
 	 * 
@@ -14,6 +14,13 @@
 	 			return 0;
 	 		}
 		}
+
+		public function surat_fasilitas_offline() {
+			$query = $this->db->query("SELECT * FROM surat");
+        	$surat = $this->db->mysqli_fetch_array($query);
+ 			return $surat;
+		}
+
 
 		public function getslideshow() {
 			$hsl = $this->db->query("SELECT * FROM slideshow");
