@@ -23,6 +23,7 @@
 		}
 
 
+
 		public function getslideshow() {
 			$hsl = $this->db->query("SELECT * FROM slideshow");
 			return $hsl;

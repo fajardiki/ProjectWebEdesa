@@ -116,13 +116,21 @@
                       <th>Nama surat yang tersedia untuk pengajuan online</th>
                       </tr>
                   </thead>
-                      <?php $this->m_user->surat_fasilitas_offline() ?>
+                     <?php foreach ($surat as $tampilkan) {
+                     ?>
                   <tbody>
                       <tr>
-                        <td style="text-align: center;"> </td>
-                        <td><a href="../config/cari.php"></a></td>
+                        <td style="text-align: center;"> <?php echo $tampilkan->kode_surat ?> </td>
+                        <td>
+                          <a href="../config/cari.php?kode_surat=<?php echo $tampilkan->kode_surat ?>">
+                            <?php echo $tampilkan->nama_surat ?> 
+                          </a>
+                       </td>
                       </tr>
                   </tbody>
+                  <?php
+                    };
+                  ?>
               </table>
           </form>
           </div>
