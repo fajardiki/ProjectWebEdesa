@@ -16,9 +16,10 @@
 		}
 
 		public function surat_fasilitas_offline() {
-			$query = $this->db->query("SELECT * FROM surat");
-        	$surat = $this->db->mysqli_fetch_array($query);
- 			return $surat;
+			$query = $this->db->select("*")
+					-> from ('surat')
+					-> get();
+				return $query->result();
 		}
 
 
