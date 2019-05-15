@@ -20,6 +20,7 @@
 					-> from ('surat')
 					-> get();
 				return $query->result();
+
 		}
 
 

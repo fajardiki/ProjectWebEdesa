@@ -37,7 +37,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pengajuan</a>
                                 <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdownMenuLink">
                                       <a class="dropdown-item" href="<?php echo base_url('c_dasbord/pengajuan') ?>">Pengajuan Offline</a>
-                                      <a class="dropdown-item" href="#">Pengajuan Online</a>
+                                      <a class="dropdown-item" href="../surat/permohonan-online/permohonan_masuk.php">Pengajuan Online</a>
                                       <a class="dropdown-item" href="statuspengajuan_admin.php">Status Pengajuan</a>
                                 </div>
                     </li>
@@ -95,49 +95,75 @@
     
       <!-- akhir navbar -->
     
-     <!-- isi -->
+    <!-- isi -->
     <div class="container" id="isi">
       <div class="row">
-        <div class="col-sm-12">
-          
-          <div class="judul">
-            <br>
-            <h1 align="center">Surat pengajuan</h1>
-            <br>
-          </div>
-          
+        <div class="col-sm-12 col-sm-lg-md-xs-2">
+          <br>
+          <fieldset >
 
-          <div class="list">
-          <form>
-              <table class="table table-bordered" align="center" style="width: 900px;">
-                  <thead>
-                      <tr style="text-align: center; font-size: 20px;">
-                      <th>Kode Surat </th>
-                      <th>Nama surat yang tersedia untuk pengajuan online</th>
-                      </tr>
-                  </thead>
-                     <?php foreach ($surat as $tampilkan) {
+    
+
+       <div style="margin-bottom:15px; margin-right: 10px;" >
+        <form action="" method="post">
+            <table>
+                <tr> 
+                  <td width="900">
+                    <legend><h1 style="color: black">Data Warga</h1></legend>
+                  </td>
+                  <td>
+                    <input type="text" name="input_cari" placeholder="Cari Berdasarkan Nama Warga" class="css-input form-control" style="width:250px;" autocomplete="off"> </input>
+                  </td>
+                  <td width="20"></td>
+                  <td>
+                     <button type="submit" name="cari" value="Cari" class="btn btn-danger" style="padding:3px; width: 50px; height: 38px;" margin="6px;" width="50px;"> <i class="fa fa-search"></i> </button>
+                  </td>
+                </tr>
+            </table>
+        </form>
+       </div>
+
+       <div class="col-sm-lg-md-xs-2">
+      <form action="../index1.php" method="post">
+        <table class="table table-bordered">
+          <tr style="background-color: skyblue;" align="center">
+           <th>NIK</th>
+           <th>NKK</th>
+           <th>NAMA</th>
+           <th>TEMPAT LAHIR</th>
+           <th>TANGGAL LAHIR</th>
+           <th>OPSI</th>
+           
+           </tr>
+          
+          <?php foreach ($surat as $tampilkan) {
                      ?>
-                  <tbody>
-                      <tr>
-                        <td style="text-align: center;"> <?php echo $tampilkan->kode_surat ?> </td>
-                        <td>
-                          <a href="<?php echo base_url('c_surat/surat') ?>">
-                            <?php echo $tampilkan->nama_surat ?> 
-                          </a>
-                       </td>
-                      </tr>
-                  </tbody>
-                  <?php
-                    };
-                  ?>
-              </table>
-          </form>
-          </div>
+          <tbody>
+            <tr>
+              <td><?php echo $data->nik?></td>
+              <td><?php echo $data->nkk ?></td>
+              <td><?php echo $data->nama?></td>
+              <td><?php echo $data->tempat_lahir?></td>
+              <td><?php echo $data->tanggal_lahir?></td>
+              <td align="center"><a href="../permohonan-offline/form.php?nik=<?php echo $data['nik']?>&kode_surat=<?php echo $kode_surat ?>" class="btn btn-info btn-sm">Pilih </a></td>
+            </tr>
+          </tbody>
+          <?php 
+          } 
+          ?>
+         </table>
+      </form>
         
-        </div>
-      </div>
+          </td>
+         </tr>
+        
+       </table>
+      </fieldset>
+      <br> <br><br>
+     </div>
     </div>
+  </div>
+        <!-- akhir pengumuman baru -->
 
     <!-- akhir isi -->
 
