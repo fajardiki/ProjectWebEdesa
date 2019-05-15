@@ -28,5 +28,10 @@
 			$hsl = $this->db->query("SELECT * FROM slideshow");
 			return $hsl;
 		}
+
+		public function getSurat($id) {
+			$hsl = $this->db->query("SELECT * FROM surat WHERE kode_surat = '$id'");
+			return $hsl;
+		}
 	}
 ?>

@@ -122,7 +122,7 @@
                       <tr>
                         <td style="text-align: center;"> <?php echo $tampilkan->kode_surat ?> </td>
                         <td>
-                          <a href="../config/cari.php?kode_surat=<?php echo $tampilkan->kode_surat ?>">
+                          <a href="<?php echo base_url().'c_surat/surat/'.$tampilkan->kode_surat; ?>">
                             <?php echo $tampilkan->nama_surat ?> 
                           </a>
                        </td>
