@@ -1,7 +1,7 @@
 <!-- navbar -->
 	    <nav class="navbar navbar-expand-md bg-warning navbar-light" id="navbar">
 	      <!-- Brand -->
-	      <a class="navbar-brand" href="index_admin.php">Home</a>
+	      <a class="navbar-brand" href="<?php echo base_url().'c_dasbord' ?>">Home</a>
 
 	      <!-- Toggler/collapsibe Button -->
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -38,7 +38,7 @@
 	            <a class="nav-link" href="../pengaturan/edit_pengumuman.php">Pengaturan</a>
 	          </li>
 	          <li class="nav-item"> 
-	            <a class="nav-link" href="../surat/tambah_data.php">Tambah data</a>
+	            <a class="nav-link" href="<?php echo base_url().'c_warga' ?>">Tambah data</a>
 	          </li>
 	        </ul>
 	        <ul class="navbar-nav">
