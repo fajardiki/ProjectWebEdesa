@@ -10,14 +10,19 @@ class c_surat extends CI_Controller {
 		}
 
 		public function index() {
-			$data = array(
-				'head'=>'v_header',
-				'foot'=>'v_footer',
-				'slideshow'=>$this->m_user->getslideshow(),
-				'surat' => $this->m_user->surat_fasilitas_offline()
-			);
+			if (!$this->session->userdata('username')) {
+				$this->load->view('v_login');
+			} else {
+				$data = array(
+					'head'=>'v_header',
+					'foot'=>'v_footer',
+					'slideshow'=>$this->m_user->getslideshow(),
+					'surat' => $this->m_user->surat_fasilitas_offline()
+				);
 
-			$this->load->view('surat/pengajuan-offline/v_fasilitas',$data);
+				$this->load->view('surat/pengajuan-offline/v_fasilitas',$data);
+			}
+			
 		}
 
 		public function surat() {

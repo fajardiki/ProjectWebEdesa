@@ -13,13 +13,17 @@
     <title>Halaman Utama E-Desa</title>
   </head>
   <body>
+
   	<div class="container-fluid">
 	  	<!-- Header -->
 	  	<?php $this->load->view($head) ?>
 	  	<!-- Akhir Header -->
 
 	  	<?php $this->load->view($navbar) ?>
-		
+	  	<?php $nama = $this->session->userdata('user'); ?>
+	  	<?php foreach ($nama as $us) {
+	  		$namaadmin = $us['namaadmin'];
+	  	} ?>
 		<!-- Isi -->
 		<!-- Slide Show -->
 		<div class="carousel">
@@ -71,6 +75,13 @@
 			<div class="row">
 				<div class="col-sm-12" id="pengumuman_title">
 					<h2>Pengumunan Terbaru</h2>
+					<?php 
+						if (!$this->session->userdata('username')) {
+							echo "Kosong";
+						} else {
+							echo "Ada";
+						}
+					?>
 					<hr>
 				</div>
 			</div>

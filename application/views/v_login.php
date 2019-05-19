@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Halaman Login cuyy</title>
+    <title>Halaman Login</title>
   </head>
   <body>
    
@@ -40,9 +40,9 @@
 
       <div class="col-sm-6 mb-3">
           <img src="<?php echo base_url().'assets/img/desa.jpg' ?>" class="img-fluid mb-3" alt="Responsive image" style="border-radius: 4px">
-          <h4 class="mb-0">Desa Suboh</h4>
-          <h6>Jl. Arak - arak Bondowoso Kec. Suboh Kab. Situbondo</h6>
-          <h6>No. Telp : 08x xxx xxx xxx</h6><h6>Kode Pos : 68354</h6>
+          <h4 class="mb-0">Desa Tribungan</h4>
+          <h6>Kec. Mlandingan Kab. Situbondo</h6>
+          <h6>No. Telp : 08x xxx xxx xxx</h6><h6>Kode Pos : 68363</h6>
       </div>
 
       <br>

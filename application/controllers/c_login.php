@@ -10,17 +10,29 @@
 		}
 
 		public function index() {
-			$this->load->view('v_login');
+			if (!$this->session->userdata('username')) {
+				$this->load->view('v_login');
+			} else {
+				redirect('c_dasbord');
+			}
+			
 		}
 
 		public function login_user() {
 			$btn = $this->input->post('btnlogin');
 			if (isset($btn)) {
-				$user = $this->input->post("username");
-				$pass = $this->input->post("password");
-				$cekk = $this->m_user->login_admin($user, $pass);
+				$username = $this->input->post("username");
+				$password = $this->input->post("password");
+				
+
+				$cekk = $this->m_user->login_admin($username, $password);
 				if ($cekk) {
-					$this->session->set_userdata(array('user'=>$user));
+					$dt= array(
+						'username' => $username,
+						'password' => $password,
+						'user' => $this->m_user->getSession($username)
+					);
+					$ses = $this->session->set_userdata($dt);
 					redirect('c_dasbord');
 				} else {
 					redirect('c_login');

@@ -1,4 +1,8 @@
 <!-- navbar -->
+		<?php $nama = $this->session->userdata('user'); ?>
+		<?php foreach ($nama as $us) {
+			$namaadmin = $us['namaadmin'];
+		} ?>
 	    <nav class="navbar navbar-expand-md bg-warning navbar-light" id="navbar">
 	      <!-- Brand -->
 	      <a class="navbar-brand" href="<?php echo base_url().'c_dasbord' ?>">Home</a>
@@ -38,7 +42,7 @@
 	            <a class="nav-link" href="../pengaturan/edit_pengumuman.php">Pengaturan</a>
 	          </li>
 	          <li class="nav-item"> 
-	            <a class="nav-link" href="<?php echo base_url().'c_warga' ?>">Tambah data</a>
+	            <a class="nav-link" href="<?php echo base_url().'c_warga' ?>">Data Warga</a>
 	          </li>
 	        </ul>
 	        <ul class="navbar-nav">
@@ -49,7 +53,7 @@
 	          <li class="nav-item dropdown">
 	            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	            	<img style="width: 50px;" src="<?php echo base_url().'assets/img/desa.jpg' ?>">
-	              	Fajar Siddiqi Putu Sa'ed
+	              	<?php echo $namaadmin; ?>
 	            </a>
 	            <div class="dropdown-menu dropdown-menu-right bg-warning" aria-labelledby="navbarDropdownMenuLink">
 	            	<div class="profile">
@@ -60,14 +64,13 @@
 	            		</div>
 	            		<div class="row">
 	            			<div class="col">
-	            				<p>Fajar Siddiqi putu sa'ed</p>
-	            				<p>Haiiiii iii</p>
+	            				<p><?php echo $namaadmin; ?></p>
 	            			</div>
 	            		</div>
 	            	</div>
 	            	
 	              <a class="dropdown-item" href="ubah_profil_admin.php">Edit profil</a>
-	              <a class="dropdown-item" href="config/logout.php">Log out</a>
+	              <a class="dropdown-item" href="<?php echo base_url().'c_logout'; ?>">Log out</a>
 	            </div>
 	        </ul>
 	      </div> 

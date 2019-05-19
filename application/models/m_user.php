@@ -5,6 +5,8 @@
 	 */
 	class M_user extends CI_Model {
 		
+		// Login warga
+
 		public function login_admin($username, $password) {
 			$periksa = $this->db->get_where('admin',array('username'=>$username, 'password'=>$password));
 
@@ -14,6 +16,13 @@
 	 			return 0;
 	 		}
 		}
+
+		public function getSession($user) {
+			$hsl = $this->db->query("SELECT namaadmin FROM admin WHERE username = '$user'");
+			return $hsl->result_array();
+		}
+
+		// 
 
 		public function surat_fasilitas_offline() {
 			$query = $this->db->select("*")
@@ -33,5 +42,7 @@
 			$hsl = $this->db->query("SELECT * FROM surat WHERE kode_surat = '$id'");
 			return $hsl;
 		}
+
+		
 	}
 ?>

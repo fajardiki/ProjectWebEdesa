@@ -1,3 +1,7 @@
+<?php $nama = $this->session->userdata('user'); ?>
+<?php foreach ($nama as $us) {
+  $namaadmin = $us['namaadmin'];
+} ?>
 <!doctype html>
 <html lang="en">
   <head>
