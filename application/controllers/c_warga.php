@@ -7,6 +7,7 @@ class c_warga extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->model('m_user');
+		$this->load->model('m_warga');
 	}
 
 	public function index() {
@@ -14,6 +15,7 @@ class c_warga extends CI_Controller {
 				'head'=>'v_header',
 				'foot'=>'v_footer',
 				'navbar'=>'v_navbar',
+				'tittle' => 'Tambah KK Baru',
 				'kk' => 'v_tambahkk'
 			);
 
@@ -25,17 +27,33 @@ class c_warga extends CI_Controller {
 				'head'=>'v_header',
 				'foot'=>'v_footer',
 				'navbar'=>'v_navbar',
+				'tittle' => 'Tambah KK Baru',
 				'kk' => 'v_tambahkk'
 			);
 		$this->load->view('admin/v_datawarga',$data);
 	}
 
 	public function tambahwarga() {
-		$this->load->view('admin/v_tambahkk');
+		$data = array(
+				'head'=>'v_header',
+				'foot'=>'v_footer',
+				'navbar'=>'v_navbar',
+				'tittle' => 'Tambah Warga Baru',
+				'wrg' => 'v_tambahwarga'
+			);
+		$this->load->view('admin/v_datawarga',$data);
 	}
 
 	public function semuawarga() {
-		$this->load->view('admin/v_tambahkk');
+		$data = array(
+				'head'=>'v_header',
+				'foot'=>'v_footer',
+				'navbar'=>'v_navbar',
+				'swrg' => 'v_semuawarga',
+				'tittle' => 'Data Warga',
+				'datawarga' => $this->m_warga->getwarga()
+			);
+		$this->load->view('admin/v_datawarga',$data);
 	}
 }
 ?>

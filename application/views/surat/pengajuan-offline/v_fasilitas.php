@@ -1,6 +1,6 @@
 <?php $nama = $this->session->userdata('user'); ?>
 <?php foreach ($nama as $us) {
-  $namaadmin = $us['namaadmin'];
+  $namaadmin = $us['nama'];
 } ?>
 <!doctype html>
 <html lang="en">

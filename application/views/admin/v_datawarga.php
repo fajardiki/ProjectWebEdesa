@@ -21,41 +21,53 @@
 	  	<?php $this->load->view($navbar) ?>
 		
 
+    <div class="container-fluid">
          <!-- isi -->
-    <div class="row">
-     <div class="container-fluid" id="isi" style="margin-bottom: -11px;">
-    <div class="col-sm-12 julsip text-center">
-      <br><h2>
-          <strong>
-            Data Warga
-          </strong>
-      </h2><br>
-    </div>
-  </div>
-    <div class="container" id="isi">
       <div class="row">
-
-        <!-- sidebar -->
-        <div class="col-sm-3 sidebar">
-          <div class="collapse d-sm-flex bg-warning pt-2 h-100" id="sidebar">
-            <ul class="nav flex-column flex-nowrap">
-                <li class="nav-item sideitem"><a class="nav-link" href="<?php echo base_url().'c_warga/tambahkk' ?>">Tambah kk baru</a></li>
-                <li class="nav-item sideitem"><a class="nav-link" href="tambah_data.php?page=tambahwargabaru">Tambah warga baru</a></li>
-                <li class="nav-item sideitem"><a class="nav-link" href="tambah_data.php?page=DataWarga">Data Warga</a></li>
-            </ul>
+         <div class="container-fluid" id="isi" style="margin-bottom: -11px;">
+          <div class="col-sm-12 julsip text-center">
+            <br><h2>
+                <strong>
+                  <?php echo $tittle ?>
+                </strong>
+            </h2><br>
           </div>
         </div>
-        <!-- akhir sidebar -->
+        <div class="container-fluid" id="isi">
+          <div class="row">
 
-        <!-- isi sidebar -->
-        <div class="col-sm-9 isi_sbar">
-        
-                 
-         </div>
+            <!-- sidebar -->
+            <div class="col-sm-3 bg-warning sidebar">
+              <div class="collapse d-sm-flex pt-2 pb-2" id="sidebar">
+                <ul class="nav flex-column flex-nowrap">
+                    <li class="nav-item sideitem"><a class="nav-link" href="<?php echo base_url().'c_warga/tambahkk' ?>">Tambah kk baru</a></li>
+                    <li class="nav-item sideitem"><a class="nav-link" href="<?php echo base_url().'c_warga/tambahwarga' ?>">Tambah warga baru</a></li>
+                    <li class="nav-item sideitem"><a class="nav-link" href="<?php echo base_url().'c_warga/semuawarga' ?>">Data Warga</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- akhir sidebar -->
+
+            <!-- isi sidebar -->
+            <div class="col-sm-9 isi_sbar">
+              <?php 
+                if (isset($kk)) {
+                  $this->load->view('admin/'.$kk);
+                } elseif (isset($wrg)) {
+                  $this->load->view('admin/'.$wrg);
+                } elseif (isset($swrg)) {
+                  $this->load->view('admin/'.$swrg);
+                } else {
+                  $this->load->view('admin/'.$kk);
+                }
+              ?>
+                     
+             </div>
+          </div>
+          <br>
+        </div>
       </div>
     </div>
-  </div>
-
 
         <!-- akhir isi sidebar -->
 

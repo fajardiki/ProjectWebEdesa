@@ -1,36 +1,28 @@
 <?php 
 	/**
-	 * 
-	 */
-	class C_login extends CI_Controller {
+	* 
+	*/
+	class C_login_admin extends CI_Controller {
 
 		function __construct() {
 			parent::__construct();
 			$this->load->model('m_user');
+			$this->load->model('m_admin');
 		}
-
-		public function index() {
-			if (!$this->session->userdata('username')) {
-				$this->load->view('v_login');
-			} else {
-				redirect('c_dasbord');
-			}
-			
-		}
-
-		public function login_user() {
+		
+		public function login_admin() {
 			$btn = $this->input->post('btnlogin');
 			if (isset($btn)) {
 				$username = $this->input->post("username");
 				$password = $this->input->post("password");
 				
 
-				$cekk = $this->m_user->login_admin($username, $password);
+				$cekk = $this->m_admin->login_user($username, $password);
 				if ($cekk) {
 					$dt= array(
 						'username' => $username,
 						'password' => $password,
-						'user' => $this->m_user->getseswarga($username)
+						'user' => $this->m_admin->getSession($username)
 					);
 					$ses = $this->session->set_userdata($dt);
 					redirect('c_dasbord');

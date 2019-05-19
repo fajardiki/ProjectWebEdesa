@@ -8,7 +8,7 @@
 		// Login warga
 
 		public function login_admin($username, $password) {
-			$periksa = $this->db->get_where('admin',array('username'=>$username, 'password'=>$password));
+			$periksa = $this->db->get_where('warga',array('username'=>$username, 'password'=>$password));
 
 			if ($periksa->num_rows()>0) {
 	 			return 1;
@@ -17,8 +17,8 @@
 	 		}
 		}
 
-		public function getSession($user) {
-			$hsl = $this->db->query("SELECT namaadmin FROM admin WHERE username = '$user'");
+		public function getseswarga($user) {
+			$hsl = $this->db->query("SELECT * FROM warga WHERE username = '$user'");
 			return $hsl->result_array();
 		}
 
