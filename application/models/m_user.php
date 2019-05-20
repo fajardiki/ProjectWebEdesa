@@ -39,7 +39,7 @@
 		}
 
 		public function cari($cari) {
-			$this->db->like('nama',$cari);
+			$this->db->like('input_cari',$cari);
 			$query = $this->db->get('warga');
 			return $query->result();
 		}
