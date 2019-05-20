@@ -16,6 +16,7 @@ class c_surat extends CI_Controller {
 				$data = array(
 					'head'=>'v_header',
 					'foot'=>'v_footer',
+					'navbar'=>'v_navbar',
 					'slideshow'=>$this->m_user->getslideshow(),
 					'surat' => $this->m_user->surat_fasilitas_offline()
 				);

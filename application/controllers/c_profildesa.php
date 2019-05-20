@@ -10,14 +10,12 @@ class c_profildesa extends CI_Controller{
 	public function index()
 	{
 		$data = array(
-					'head'=>'v_header',
-					'foot'=>'v_footer',
-					'navbar'=>'v_navbar'
-					
-					);
+			'head'=>'v_header',
+			'foot'=>'v_footer',
+			'navbar'=>'v_navbar'
+		);
 
-		$hsl = $this->load->view('warga/v_profildesa',$data);
-		return $hsl;
+		$this->load->view('warga/v_profildesa',$data);
 	}
 }
 ?>

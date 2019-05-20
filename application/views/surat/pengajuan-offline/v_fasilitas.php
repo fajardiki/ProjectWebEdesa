@@ -24,7 +24,7 @@
       <!-- Akhir Header -->
 
       <!-- navbar -->
-      <?php $this->load->view('v_navbar') ?>
+      <?php $this->load->view($navbar) ?>
       <!-- akhir navbar -->
     
      <!-- isi -->
