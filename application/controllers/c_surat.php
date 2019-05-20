@@ -41,9 +41,17 @@ class c_surat extends CI_Controller {
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
-					'surat' => $this->m_user->cari_surat()
+					'surat' => $this->m_user->tampilkan_surat()
 				);
 			$this->load->view('surat/v_surat',$data);
 		}
+
+		public function cari(){
+			$cari = $this->input->post('nama');
+			$data['result'] = $this->m_user->cari($cari);
+			$this->load->view('v_surat', $data);
+		}
+
+
 }
 ?>

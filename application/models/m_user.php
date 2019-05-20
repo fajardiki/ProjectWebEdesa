@@ -31,13 +31,18 @@
 				return $query->result();
 		}
 
-		public function cari_surat() {
+		public function tampilkan_surat() {
 			$query = $this->db->select("*")
 					-> from ('warga')
 					-> get();
 				return $query->result();
 		}
 
+		public function cari($cari) {
+			$this->db->like('nama',$cari);
+			$query = $this->db->get('warga');
+			return $query->result();
+		}
 
 
 		public function getslideshow() {
