@@ -103,7 +103,7 @@
 	            </a>
 	            <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdownMenuLink">
 	              <a class="dropdown-item" href="<?php echo base_url().'c_profildesa' ?>">Profil desa</a>
-	              <a class="dropdown-item" href="panduan.php">Panduan aplikasi</a>
+	              <a class="dropdown-item" href="<?php echo base_url().'c_panduanaplikasi' ?>">Panduan aplikasi</a>
 	            </div>
 	          </li>
 
