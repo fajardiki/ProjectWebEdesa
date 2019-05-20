@@ -23,7 +23,6 @@
 			if (isset($btn)) {
 				$username = $this->input->post("username");
 				$password = $this->input->post("password");
-				
 
 				$cekk = $this->m_user->login_admin($username, $password);
 				if ($cekk) {
