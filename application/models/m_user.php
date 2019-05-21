@@ -31,17 +31,30 @@
 				return $query->result();
 		}
 
-
-
-		public function getslideshow() {
-			$hsl = $this->db->query("SELECT * FROM slideshow");
-			return $hsl;
+		public function tampilkan_surat() {
+			$query = $this->db->select("*")
+					-> from ('warga')
+					-> get();
+				return $query->result();
 		}
+
+		public function cari($cari) {
+			$this->db->like('input_cari',$cari);
+			$query = $this->db->get('warga');
+			return $query->result();
+		}
+
 
 		public function getSurat($id) {
 			$hsl = $this->db->query("SELECT * FROM surat WHERE kode_surat = '$id'");
 			return $hsl;
 		}
+
+		public function getnikwarga($nik) {
+			$hsl = $this->db->query("SELECT * FROM warga WHERE nik = '$nik'");
+			return $hsl->result_array();
+		}
+
 
 		
 	}
