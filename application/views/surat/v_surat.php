@@ -2,7 +2,7 @@
 <?php foreach ($nama as $us) {
   $namaadmin = $us['nama'];
 } ?>
-<!doctype html>
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -27,7 +27,7 @@
       <?php $this->load->view($navbar) ?>
       <!-- akhir navbar -->
     
-          <!-- isi -->
+      <!-- isi -->
      <div class="container" id="isi">
       <div class="row">
         <div class="col-sm-12 col-sm-lg-md-xs-2">
@@ -77,7 +77,7 @@
               <td><?php echo $tampilkan->nama ?></td>
               <td><?php echo $tampilkan->tempat_lahir ?></td>
               <td><?php echo $tampilkan->tanggal_lahir ?></td>
-              <td align="center"><a href="<?php echo base_url().'c_surat/surat/'.$tampilkan->nik; ?>" class="btn btn-info btn-sm">Pilih </a></td>
+              <td align="center"><a href="<?php echo base_url().'c_surat/form/'.$tampilkan->nik; ?>" class="btn btn-info btn-sm" name="pilih">Pilih </a></td>
             </tr>
           </tbody>
           <?php 
@@ -96,17 +96,7 @@
     </div>
   </div>
         <!-- akhir pengumuman baru -->
- <footer>
-  <br>
-      <div class="container ">
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <p>&copy; copyright | build by. <a href="#">Apa Aja</a></p>
-            <p><a href="" class="btn btn-primary">Facebook desa</a></p>
-          </div>
-        </div>
-      </div>
-    </footer>
+
 
     <!-- akhir isi -->
 

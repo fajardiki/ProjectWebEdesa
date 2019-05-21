@@ -17,10 +17,7 @@ class c_surat extends CI_Controller {
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
-					'surat' => $this->m_user->surat_fasilitas_offline()
-				);
-
-				
+				);			
 			}
 			
 		}
@@ -54,6 +51,18 @@ class c_surat extends CI_Controller {
 			}
 			
 		}
+
+		public function form(){
+			$btn = $this->input->post('btnpilih');
+			$data = array(
+					'head'=>'v_header',
+					'foot'=>'v_footer',
+					'navbar'=>'v_navbar',
+					'nik' => $this->m_user->getnikwarga($nik)
+				);
+
+			$this->load->view('surat/pengajuan-offline/v_form',$data);
+		} 
 
 
 }

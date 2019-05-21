@@ -27,50 +27,64 @@
       <?php $this->load->view($navbar) ?>
       <!-- akhir navbar -->
     
-     <!-- isi -->
-    <div class="container" id="isi">
+      <!-- isi -->
+<div class="container" id="isi">
       <div class="row">
         <div class="col-sm-12">
-          
           <div class="judul">
             <br>
-            <h1 align="center">Surat pengajuan</h1>
+            <h1 align="center">Daftar Surat</h1>
             <br>
           </div>
-          
-
-          <div class="list">
-          <form>
-              <table class="table table-bordered" align="center" style="width: 900px;">
-                  <thead>
-                      <tr style="text-align: center; font-size: 20px;">
-                      <th>Kode Surat </th>
-                      <th>Nama surat yang tersedia untuk pengajuan online</th>
-                      </tr>
-                  </thead>
-                     <?php foreach ($surat as $tampilkan) {
-                     ?>
-                  <tbody>
-                      <tr>
-                        <td style="text-align: center;"> <?php echo $tampilkan->kode_surat ?> </td>
-                        <td>
-                          <a href="<?php echo base_url().'c_surat/surat/'.$tampilkan->kode_surat; ?>">
-                            <?php echo $tampilkan->nama_surat ?> 
-                          </a>
-                       </td>
-                      </tr>
-                  </tbody>
-                  <?php
-                    };
-                  ?>
-              </table>
+           <?php foreach ($surat as $tampilkan) {
+            ?>
+          <form action="../surat.php" method="POST" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-25">
+                <label for="lname">Nama </label>
+              </div>
+              <div class="col-75">
+                <input type="text" name="nama" id="nik" value="<?php echo $data1['nama']; ?>" autocomplete="off">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="country">NIK </label>
+              </div>
+              <div class="col-75">
+                 <input type="text" name="nik" id="nama" value="<?php echo $nik ?>" autocomplete="off">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Jenis surat </label>
+              </div>
+              <div class="col-75">
+                <input type="text" name="jenis" id="umur" value="<?php echo $data['nama_surat']; ?>" 
+                autocomplete="off">
+                <input type="hidden" name="ks" value="<?php echo $kode_surat?>">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Keperluan </label>
+              </div>
+              <div class="col-75">
+               <input type="text" name="keperluan" id="jenis_kelamin" placeholder="keperluan pengajuan ...." autocomplete="off">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+              </div>
+              <div class="col-75">
+                <input class="btn-primary" type="submit" value="Layout" name="submit" autocomplete="off">
+              </div>
+            </div>
           </form>
-          </div>
-        
         </div>
       </div>
     </div>
-
+    <br>
     <!-- akhir isi -->
 
       <!-- Footer -->

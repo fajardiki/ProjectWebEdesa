@@ -45,15 +45,16 @@
 		}
 
 
-		public function getslideshow() {
-			$hsl = $this->db->query("SELECT * FROM slideshow");
-			return $hsl;
-		}
-
 		public function getSurat($id) {
 			$hsl = $this->db->query("SELECT * FROM surat WHERE kode_surat = '$id'");
 			return $hsl;
 		}
+
+		public function getnikwarga($nik) {
+			$hsl = $this->db->query("SELECT * FROM warga WHERE nik = '$nik'");
+			return $hsl->result_array();
+		}
+
 
 		
 	}
