@@ -73,7 +73,7 @@
 	            		</div>
 	            	</div>
 	            	
-	              <a class="dropdown-item" href="ubah_profil_admin.php">Edit profil</a>
+	              <a class="dropdown-item" href="<?php echo base_url().'c_editprofil' ?>">Edit profil</a>
 	              <a class="dropdown-item" href="<?php echo base_url().'c_logout'; ?>">Log out</a>
 	            </div>
 	        </ul>
@@ -141,7 +141,7 @@
 	            		</div>
 	            	</div>
 	            	
-	              <a class="dropdown-item" href="ubah_profil_admin.php">Edit profil</a>
+	              <a class="dropdown-item" href="<?php echo base_url().'c_editprofil' ?>">Edit profil</a>
 	              <a class="dropdown-item" href="<?php echo base_url().'c_logout'; ?>">Log out</a>
 	            </div>
 	        </ul>
