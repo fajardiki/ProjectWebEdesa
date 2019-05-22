@@ -44,6 +44,8 @@ class c_warga extends CI_Controller {
 		$this->load->view('admin/v_datawarga',$data);
 	}
 
+
+
 	public function semuawarga() {
 		$data = array(
 				'head'=>'v_header',
@@ -55,5 +57,6 @@ class c_warga extends CI_Controller {
 			);
 		$this->load->view('admin/v_datawarga',$data);
 	}
+
 }
 ?>

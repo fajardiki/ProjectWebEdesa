@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/style_user.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/bootstrap/font-awesome/css/all.min.css' ?>">
+    
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -77,7 +79,7 @@
               <td><?php echo $tampilkan->nama ?></td>
               <td><?php echo $tampilkan->tempat_lahir ?></td>
               <td><?php echo $tampilkan->tanggal_lahir ?></td>
-              <td align="center"><a href="<?php echo base_url().'c_surat/form/'.$tampilkan->nik; ?>" class="btn btn-info btn-sm" name="pilih">Pilih </a></td>
+              <td align="center"><a href="<?php echo base_url().'c_surat/form/'.$tampilkan->nik; ?>" class="btn btn-info btn-sm" name="btnpilih">Pilih </a></td>
             </tr>
           </tbody>
           <?php 

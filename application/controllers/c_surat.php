@@ -22,6 +22,9 @@ class c_surat extends CI_Controller {
 			
 		}
 
+
+		#menampilkan pengajuan_offline
+
 		public function pengajuan_offline(){
 			$data = array(
 					'head'=>'v_header',
@@ -33,6 +36,21 @@ class c_surat extends CI_Controller {
 			$this->load->view('surat/pengajuan-offline/v_fasilitas',$data);
 		} 
 
+		#menampilkan pengajuan onlie
+
+		public function pengajuan_online(){
+			$data = array(
+					'head'=>'v_header',
+					'foot'=>'v_footer',
+					'navbar'=>'v_navbar',
+					'datamasuk' => $this->m_user->surat_fasilitas_online()
+				);
+
+			$this->load->view('surat/pengajuan-online/v_permohonan_masuk',$data);
+		} 
+
+
+
 		public function surat() {
 			$data = array(
 					'head'=>'v_header',
@@ -41,24 +59,32 @@ class c_surat extends CI_Controller {
 					'surat' => $this->m_user->tampilkan_surat()
 				);
 			$this->load->view('surat/v_surat',$data);
+
+
 		}
 
+
 		public function cari(){
-			if ($this->session->userdata('username')) {
 				$cari = $this->input->post('input_cari');
-				$data['results'] = $this->m_user->cari($cari);
-				$this->load->view('v_surat', $data);
-			}
+
+				$data = array(
+					'head'=>'v_header',
+					'foot'=>'v_footer',
+					'navbar'=>'v_navbar',
+					'surat' => $this->m_user->tampilkan_surat(),
+					'result' => $this->m_user->cari($cari)
+				);
+				$this->load->view('surat/v_surat', $data);
 			
 		}
 
 		public function form(){
-			$btn = $this->input->post('btnpilih');
+			$btn = $this->
 			$data = array(
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
-					'nik' => $this->m_user->getnikwarga($nik)
+					'nik' => $this->m_user->getnikwarga($btn)
 				);
 
 			$this->load->view('surat/pengajuan-offline/v_form',$data);
