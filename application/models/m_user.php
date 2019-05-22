@@ -7,7 +7,7 @@
 		
 		// Login warga
 
-		public function login_admin($username, $password) {
+		public function login_warga($username, $password) {
 			$periksa = $this->db->get_where('warga',array('username'=>$username, 'password'=>$password));
 
 			if ($periksa->num_rows()>0) {

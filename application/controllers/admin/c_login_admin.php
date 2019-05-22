@@ -17,7 +17,7 @@
 				$password = $this->input->post("password");
 				
 
-				$cekk = $this->m_admin->login_user($username, $password);
+				$cekk = $this->m_admin->login_admin($username, $password);
 				if ($cekk) {
 					$dt= array(
 						'username' => $username,

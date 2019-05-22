@@ -18,13 +18,13 @@
 			
 		}
 
-		public function login_user() {
+		public function login_warga() {
 			$btn = $this->input->post('btnlogin');
 			if (isset($btn)) {
 				$username = $this->input->post("username");
 				$password = $this->input->post("password");
 
-				$cekk = $this->m_user->login_admin($username, $password);
+				$cekk = $this->m_user->login_warga($username, $password);
 				if ($cekk) {
 					$dt= array(
 						'username' => $username,

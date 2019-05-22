@@ -17,7 +17,7 @@
       <a class="navbar-brand">
         <img src="<?php echo base_url().'assets/brand/logo.png' ?>" width="80" height="30" alt="">
       </a>
-      <form class="form-inline" action="<?php echo base_url().'c_login/login_user' ?>" method="post">
+      <form class="form-inline" action="<?php echo base_url().'c_login/login_warga' ?>" method="post">
         <div class="form-group">
           <input type="text" class="form-control" id="staticEmail2" placeholder="Username" name="username">
         </div>
