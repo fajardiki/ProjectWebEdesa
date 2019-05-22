@@ -1,5 +1,5 @@
 <!-- navbar -->
-<?php $nama = $this->session->userdata('user'); ?>
+$nama = $this->session->userdata('user'); ?>
 <?php foreach ($nama as $us) {
 	$nama = $us['nama'];
 		$status = $us['status'];
@@ -157,7 +157,7 @@
 
 	<?php } elseif ($status == 'warga') { ?>
 
-			<!doctype html>
+	<!doctype html>
 	<html lang="en">
 	  <head>
 	    <!-- Required meta tags -->
@@ -276,7 +276,7 @@
     			<!-- akhir isi -->
     			</div>
 		  	<!-- Footer -->
-		  	<?php $this->load->view($foot) ?>
+		  	<!--<?php $this->load->view($foot) ?>
 		  	<!-- Akhir Footer -->
 		 </div>
 	    <!-- Optional JavaScript -->
@@ -287,4 +287,4 @@
 	  </body>
 	</html>
 
-    <?php } ?>
+    <!-- <?php } ?>
