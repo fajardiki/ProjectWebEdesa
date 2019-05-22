@@ -1,0 +1,216 @@
+html {
+	position: relative;
+}
+
+body {
+	background-image: url("../img/bg2.jpg");
+	font-family: Verdana sans-serif;
+}
+
+#container-utama {
+	background-color: #fff;
+	height: 100%;
+	padding-top: 10px;
+	border-radius: 5px;
+	bottom: 0px;
+}
+
+/*Bagiana header*/
+
+#header {
+	border-radius: 5px;
+	margin-left: 0.5px;
+	margin-right: 0.5px;
+}
+
+#img-logo .img-fluid {
+   	height: 115px;
+    width: 115px;
+    border-radius: 5px;
+}
+
+#img-logo {
+	padding-left: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: left;
+}
+
+#text-header {
+	padding-left: 15px;
+	padding-top: 15px;
+	color: #fff;
+
+}
+
+#text-header h1 {
+	font-size:5vw;
+}
+
+#text-header h6 {
+	font-size:2vw;
+}
+
+/*Bagian navbar*/
+
+#navbar {
+	margin-top: 5px;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+}
+
+#item-right {
+	float: right;
+}
+
+.dropdown-menu {
+
+}
+
+/*DASBOARD*/
+
+/*Bagian isi/body*/
+
+#isi {
+	margin-top: 10px;
+	border-radius: 5px;
+	min-height: 100%;
+}
+
+.utama-isi {
+	background-color: #aaa;
+	padding-top: 14px;
+	border-radius: 5px;
+	margin-bottom: 14px;
+}
+
+/*Bagian biodata*/
+
+.biodata-container {
+	background-color: #aaa;
+	height: auto;
+	border-radius: 5px;
+	margin-bottom: 7px;
+	padding-top: 14px;
+	padding-left: 14px;
+	padding-right: 14px;
+	padding-bottom: 25px;
+}
+
+.img-bio {
+	padding-bottom: 20px;
+}
+
+.bio-img {
+	width: auto;
+}
+
+.bio-img .img-fluid {
+	width: auto;
+}
+
+.infor-bio {
+	margin-top: 10px;
+	font-size: 5vw;
+}
+
+/*Bagian slide show*/
+
+.carousel {
+  max-width: 1000px;
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.carousel-control-prev {
+	position: absolute;
+	height: auto;
+}
+
+/*Bagian pengumuman*/
+
+.pengumuman-baru {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.pengumuman-baru h1 {
+	font-weight: bold;
+}
+
+.pengumuman {
+	background-color: #fff;
+	height: auto;
+	border-radius: 5px;
+	padding-top: 7px;
+	padding-left: 7px;
+	margin-bottom: 14px;
+}
+
+#img-pengumuman .img-fluid {
+	width: auto;
+	border-radius: 5px;
+}
+
+/*Bagian gambar melayang*/
+
+/*AKHIR DASBOARD*/
+
+/*ARSIP PENGAJUAN*/
+
+.julsip {
+	background-color: #aaa;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+.head-hal h1 {
+	text-align:center;
+}
+
+#sidebar {
+	border-radius: 5px;
+}
+
+.isi_sbar {
+	background-color: #aaa;
+	margin-bottom: 10px;
+	height: 100%;
+	border-radius: 5px;
+	padding-bottom: 15px;
+}
+
+/*AKHIR ARSIP PENGAJUAN*/
+
+/*HUT DESA*/
+
+.sidebar {
+	height: 100%;
+	font-weight: bold;
+	color: #000;
+}
+
+.sidebar a {
+	color: #000;
+}
+
+.hutfoto {
+	padding-bottom: 15px;
+}
+
+/*BAGIAN HUT DESA*/
+
+/*Bagian footer*/
+
+footer {
+	width: 100%;
+	background-color: #aaa;
+	padding-top: 10px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}

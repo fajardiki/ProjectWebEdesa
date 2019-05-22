@@ -23,11 +23,17 @@
 		}
 
 		// 
-
+		#pemaggilan data ke database surat
 		public function surat_fasilitas_offline() {
 			$query = $this->db->select("*")
 					-> from ('surat')
 					-> get();
+				return $query->result();
+		}
+
+
+		public function surat_fasilitas_online() {
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga  ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status = 'Diajukan'");
 				return $query->result();
 		}
 
@@ -39,9 +45,8 @@
 		}
 
 		public function cari($cari) {
-			$this->db->like('input_cari',$cari);
-			$query = $this->db->get('warga');
-			return $query->result();
+			$query = $this->db->query("SELECT * FROM warga WHERE nama like '%$cari%'");
+			return $query->result_array();
 		}
 
 
