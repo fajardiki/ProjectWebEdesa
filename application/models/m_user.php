@@ -60,19 +60,19 @@
 			return $hsl->result_array();
 		}
 
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
 
->>>>>>> fde4148f2d2714e8e5a7b3726173c31b19a52d30
+// >>>>>>> fde4148f2d2714e8e5a7b3726173c31b19a52d30
 		public function getslideshow() {
 			$hsl = $this->db->query("SELECT * FROM slideshow");
 			return $hsl;
 		}
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
 
 
->>>>>>> fde4148f2d2714e8e5a7b3726173c31b19a52d30
+// >>>>>>> fde4148f2d2714e8e5a7b3726173c31b19a52d30
 		
 	}
 ?>
