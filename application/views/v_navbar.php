@@ -113,7 +113,7 @@
 	            </a>
 	            <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdownMenuLink">
 	              <a class="dropdown-item" href="../surat/permohonan-online/list-surat.php">Formulir pengajuan</a>
-	              <a class="dropdown-item" href="statuspengajuan_user.php">Cek status pengajuan</a>
+	              <a class="dropdown-item" href="<?php echo base_url().'c_statuspengajuan' ?>">Cek status pengajuan</a>
 	            </div>
 	          </li>
 	        </ul>
