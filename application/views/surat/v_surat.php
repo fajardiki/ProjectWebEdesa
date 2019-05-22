@@ -77,7 +77,7 @@
               <td><?php echo $tampilkan->nama ?></td>
               <td><?php echo $tampilkan->tempat_lahir ?></td>
               <td><?php echo $tampilkan->tanggal_lahir ?></td>
-              <td align="center"><a href="<?php echo base_url().'c_surat/form/'.$tampilkan->nik; ?>" class="btn btn-info btn-sm" name="pilih">Pilih </a></td>
+              <td align="center"><a href="<?php echo base_url().'c_surat/form/'.$tampilkan->nik; ?>" class="btn btn-info btn-sm" name="btnpilih">Pilih </a></td>
             </tr>
           </tbody>
           <?php 
