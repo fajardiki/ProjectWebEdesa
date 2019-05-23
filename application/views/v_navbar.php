@@ -3,6 +3,7 @@
 		<?php foreach ($nama as $us) {
 			$nama = $us['nama'];
 			$status = $us['status'];
+			$avatar = $us['avatar'];
 		} ?>
 
 		<?php if ($status == 'admin') { ?>
@@ -56,14 +57,14 @@
 			    </span
 	          <li class="nav-item dropdown">
 	            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	            	<img style="width: 50px;" src="<?php echo base_url().'assets/img/desa.jpg' ?>">
+	            	<img style="width: 35px;" src="assets/img_profil/<?php echo $avatar ?>">
 	              	<?php echo $nama; ?>
 	            </a>
 	            <div class="dropdown-menu dropdown-menu-right bg-warning" aria-labelledby="navbarDropdownMenuLink">
 	            	<div class="profile">
 	            		<div class="row">
 	            			<div class="col">
-	            				<img src="<?php echo base_url().'assets/img/desa.jpg' ?>" alt="..." class="img-thumbnail">
+	            				<img src="assets/img_profil/<?php echo $avatar ?>" alt="..." class="img-thumbnail">
 	            			</div>
 	            		</div>
 	            		<div class="row">
@@ -124,14 +125,14 @@
 			    </span
 	          <li class="nav-item dropdown">
 	            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	            	<img style="width: 50px;" src="<?php echo base_url().'assets/img/desa.jpg' ?>">
+	            	<img style="width: 35px;" src="assets/img_profil/<?php echo $avatar ?>">
 	              	<?php echo $nama; ?>
 	            </a>
 	            <div class="dropdown-menu dropdown-menu-right bg-warning" aria-labelledby="navbarDropdownMenuLink">
 	            	<div class="profile">
 	            		<div class="row">
 	            			<div class="col">
-	            				<img src="<?php echo base_url().'assets/img/desa.jpg' ?>" alt="..." class="img-thumbnail">
+	            				<img src="assets/img_profil/<?php echo $avatar ?>" alt="..." class="img-thumbnail">
 	            			</div>
 	            		</div>
 	            		<div class="row">

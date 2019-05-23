@@ -24,6 +24,10 @@
 
 	<?php if ($status == 'admin') { ?>
 
+		<?php foreach ($nama as $a) {
+			$img = $a['avatar'];
+		} ?>
+
 	  	<div class="container-fluid">
 		  	<!-- Header -->
 		  	<?php $this->load->view($head) ?>
