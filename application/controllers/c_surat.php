@@ -37,7 +37,6 @@ class c_surat extends CI_Controller {
 		} 
 
 		#menampilkan pengajuan onlie
-
 		public function pengajuan_online(){
 			$data = array(
 					'head'=>'v_header',
@@ -65,14 +64,14 @@ class c_surat extends CI_Controller {
 
 
 		public function cari(){
-				$cari = $this->input->post('input_cari');
+				$mencari = $this->input->post('input_cari');
 
 				$data = array(
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
 					'surat' => $this->m_user->tampilkan_surat(),
-					'result' => $this->m_user->cari($cari)
+					'result' => $this->m_user->cari($mencari)
 				);
 				$this->load->view('surat/v_surat', $data);
 			
@@ -88,6 +87,17 @@ class c_surat extends CI_Controller {
 				);
 
 			$this->load->view('surat/pengajuan-offline/v_form',$data);
+		} 
+
+		public function status_pengajuan(){
+			$data = array(
+					'head'=>'v_header',
+					'foot'=>'v_footer',
+					'navbar'=>'v_navbar',
+					'nik' => $this->m_user->status_pengajuan()
+				);
+
+			$this->load->view('surat/status_pengajuan',$data);
 		} 
 
 

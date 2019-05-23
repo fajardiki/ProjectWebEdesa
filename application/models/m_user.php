@@ -17,6 +17,11 @@
 	 		}
 		}
 
+		public function getslideshow() {
+			$hsl = $this->db->query("SELECT * FROM slideshow");
+			return $hsl;
+		}
+
 		public function getseswarga($user) {
 			$hsl = $this->db->query("SELECT * FROM warga WHERE username = '$user'");
 			return $hsl->result_array();
@@ -60,19 +65,12 @@
 			return $hsl->result_array();
 		}
 
-// <<<<<<< HEAD
-// =======
-
-// >>>>>>> fde4148f2d2714e8e5a7b3726173c31b19a52d30
-		public function getslideshow() {
-			$hsl = $this->db->query("SELECT * FROM slideshow");
-			return $hsl;
+		public function status_pengajuan() {
+			$hsl = $this->db->query("CALL statuspengajuan();");
+			return $hsl->result_array();
 		}
-// <<<<<<< HEAD
-// =======
 
-
-// >>>>>>> fde4148f2d2714e8e5a7b3726173c31b19a52d30
 		
+
 	}
 ?>

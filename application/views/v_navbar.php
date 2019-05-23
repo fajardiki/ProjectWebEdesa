@@ -28,7 +28,7 @@
 	            <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdownMenuLink">
 	              <a class="dropdown-item" href="<?php echo base_url('c_surat/pengajuan_offline') ?>">Pengajuan Offline</a>
 	              <a class="dropdown-item" href="<?php echo base_url('c_surat/pengajuan_online') ?>"> Pengajuan Online</a>
-	              <a class="dropdown-item" href="statuspengajuan_admin.php">Status Pengajuan</a>
+	              <a class="dropdown-item" href="<?php echo base_url('c_surat/status_pengajuan') ?>">Status Pengajuan</a>
 	            </div>
 	          </li>
 
