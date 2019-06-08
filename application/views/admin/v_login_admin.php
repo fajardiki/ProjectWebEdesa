@@ -12,28 +12,34 @@
     <title>Login Admin</title>
   </head>
   <body>
-    <div class="container" id="container-login">
-      <br>
-      <h4>Login Admin</h4>
-      <br>
-      <div class="container-fluid">
-      <form action="<?php echo base_url().'admin/c_login_admin/login_admin' ?>" method="post">
-        <div class="form-group">
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" name="username">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <div style="padding-top: 10%; padding-bottom: 10%;">
+    <div class="container card col-sm-3" style="padding-top: 15px; padding-bottom: 15px;">
+        <div align="center">
+        <h4>Login Admin</h4>
+        <hr style="background-color: #000; width: 50%;">
         </div>
+       
+        <br>
+        <div>
+            <form action="<?php echo base_url().'admin/c_login_admin/login_admin' ?>" method="post">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" name="username">
+                  <small id="emailHelp" class="form-text text-muted"><!-- We'll never share your email with anyone else. --></small>
+                </div>
         <div class="form-group">
           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
         </div>
-        <div class="form-group form-check">
+        <!-- <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
+        </div> -->
         <button type="submit" class="btn btn-primary" name="btnlogin">Login</button>
       </form>
       </div>
     </div>
 
+    </div>
+   
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
