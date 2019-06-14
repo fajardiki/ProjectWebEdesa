@@ -40,51 +40,35 @@
         
         <div>
 
-            
-            <form action="" method="POST" enctype="multipart/form-data">
-           
-            <div class="row">
-                <div class="col-25">
-                  <label for="lname">Nama </label>
-                </div>
-                <div class="col-75">
-                  <input type="text" name="nama" id="nik" value="" autocomplete="off" class="css-input form-control" style="width:250px;">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                  <label for="country">NIK </label>
-                </div>
-                <div class="col-75">
-                  <input type="text" name="nik" id="nama" value="" autocomplete="off" class="css-input form-control" style="width:250px;">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                  <label for="subject">Jenis surat </label>
-                </div>
-                <div class="col-75">
-                  <input type="text" name="jenis" id="umur" value="" autocomplete="off" class="css-input form-control" style="width:250px;">
-                  <input type="hidden" name="ks" value="">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                  <label for="subject">Keperluan </label>
-                </div>
-                <div class="col-75">
-                  <input type="text" name="keperluan" id="jenis_kelamin" placeholder="keperluan pengajuan ...." autocomplete="off" class="css-input form-control" style="width:250px;">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                  </div>
-                <div class="col-75">
-                  <input class="btn btn-primary" type="submit" name="submit" autocomplete="off" value="Kirim">
+            <form action="" method="POST" enctype="multipart/form-data"> 
+            <div>
+                <div align="center">
+                    <table>
+                        <tr>
+                            <td  style="padding-bottom: 10px;"> <label for="lname">Nama </label> </td>
+                            <td  style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="nama" id="nik" value="" autocomplete="off" class="css-input form-control" style="width:250px;"> </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 10px;"> <label for="country">NIK </label> </td>
+                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="nik" id="nama" value="" autocomplete="off" class="css-input form-control" style="width:250px;"> </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 10px;"> <label for="subject">Jenis surat </label> </td>
+                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="jenis" id="umur" value="" autocomplete="off" class="css-input form-control" style="width:250px;"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 10px;"> <label for="subject">Keperluan </label> </td>
+                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="keperluan" id="jenis_kelamin" placeholder="Keperluan pengajuan..." autocomplete="off" class="css-input form-control" style="width:250px;"> </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="padding-bottom: 10px; text-align: right;"> <input class="btn btn-primary" type="submit" name="submit" autocomplete="off" value="Kirim"> </td>
+                        </tr>
+                  </table>
                 </div>
             </div>
             </form>
-          
+
         </div>
       
         </div>
