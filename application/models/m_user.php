@@ -74,6 +74,15 @@
 		}
 
 		
+		public function datasuratform($kode) {
+			$hsl = $this->db->query("SELECT * FROM surat WHERE kode_surat = '$kode'");
+			return $hsl;
+		}
+
+		public function insert($data) {
+    		$hsl = $this->db->query("INSERT INTO permohonan VALUES('$nik','','','','$nameFile2','$nameFile1','$keperluan','Diajukan','$ksurat','admin')");
+    		return $hsl;
+  		}
 
 	}
 ?>

@@ -15,6 +15,67 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Halaman Utama E-Desa</title>
+
+    <style>
+     * {
+  box-sizing: border-box;
+  }
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  label {
+    padding: 6px 12px 12px 30px;
+    display: inline-block;
+  }
+
+  input[type=submit] {
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+
+  input[type=submit]:hover {
+     background-color: #45a049;
+  }
+
+  .col-25 {
+    margin-left: 350px;
+    padding-left: 30px;
+    float: right;
+    width: 15%;
+    margin-top: 6px;
+  }
+
+  .col-75 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+   </style>
   </head>
 
   <body>
@@ -26,67 +87,85 @@
       <!-- navbar -->
       <?php $this->load->view($navbar) ?>
       <!-- akhir navbar -->
+
+      <?php $nama = $this->session->userdata('user'); ?>
+      <?php foreach ($nama as $us) {
+        $namauser = $us['nama'];
+        $niks = $us['nik'];
+      } ?>
+
+      <?php foreach ($nik->result_array() as $nk) {
+        $namas = $nk['nama_surat'];
+      } ?>
     
       <!-- isi -->
-<div class="container" id="isi">
+    <div class="container" id="isi">
       <div class="row">
-
         <div class="col-sm-12">
-            <div class="judul">
-              <br>
-              <h1 align="center">Daftar Surat</h1>
-              <br>
-            </div>
-        
-        <div>
-
-            
-            <form action="" method="POST" enctype="multipart/form-data">
-           
+          <div class="judul">
+            <br>
+            <h1 align="center">Daftar Surat</h1>
+            <br>
+          </div>
+          <form action="<?php echo base_url().'c_surat/uploudpengajuan' ?>" method="POST" enctype="multipart/form-data">
             <div class="row">
-                <div class="col-25">
-                  <label for="lname">Nama </label>
-                </div>
-                <div class="col-75">
-                  <input type="text" name="nama" id="nik" value="" autocomplete="off" class="css-input form-control" style="width:250px;">
-                </div>
+              <div class="col-25">
+                <label for="lname">Nama </label>
+              </div>
+              <div class="col-75">
+                <input type="text" name="nama" id="nama" value="<?php echo $namauser; ?>" autocomplete="off">
+              </div>
             </div>
             <div class="row">
-                <div class="col-25">
-                  <label for="country">NIK </label>
-                </div>
-                <div class="col-75">
-                  <input type="text" name="nik" id="nama" value="" autocomplete="off" class="css-input form-control" style="width:250px;">
-                </div>
+              <div class="col-25">
+                <label for="country">NIK </label>
+              </div>
+              <div class="col-75">
+                 <input type="text" name="nik" id="nik" value="<?php echo $niks; ?>" autocomplete="off">
+              </div>
             </div>
             <div class="row">
-                <div class="col-25">
-                  <label for="subject">Jenis surat </label>
-                </div>
-                <div class="col-75">
-                  <input type="text" name="jenis" id="umur" value="" autocomplete="off" class="css-input form-control" style="width:250px;">
-                  <input type="hidden" name="ks" value="">
-                </div>
+              <div class="col-25">
+                <label for="subject">Scan ktp </label>
+              </div>
+              <div class="col-75">
+                <input type="file" name="gambarktp">
+              </div>
             </div>
             <div class="row">
-                <div class="col-25">
-                  <label for="subject">Keperluan </label>
-                </div>
-                <div class="col-75">
-                  <input type="text" name="keperluan" id="jenis_kelamin" placeholder="keperluan pengajuan ...." autocomplete="off" class="css-input form-control" style="width:250px;">
-                </div>
+              <div class="col-25">
+                <label for="subject">Scan kk </label>
+              </div>
+              <div class="col-75">
+                <input type="file" name="gambarkk">
+              </div>
             </div>
             <div class="row">
-                <div class="col-25">
-                  </div>
-                <div class="col-75">
-                  <input class="btn btn-primary" type="submit" name="submit" autocomplete="off" value="Kirim">
-                </div>
+              <div class="col-25">
+                <label for="subject">Jenis surat </label>
+              </div>
+              <div class="col-75">
+                <input type="text" name="jenis" id="umur" value="<?php echo $namas; ?>" 
+                autocomplete="off">
+                <input type="hidden" name="ks" value="">
+              </div>
             </div>
-            </form>
-          
-        </div>
-      
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Keperluan </label>
+              </div>
+              <div class="col-75">
+               <input type="text" name="keperluan" id="jenis_kelamin" placeholder="keperluan pengajuan ...." autocomplete="off">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+              </div>
+              <div class="col-75">
+                <input class="btn-primary" type="submit" value="Kirim" name="submit" autocomplete="off">
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
