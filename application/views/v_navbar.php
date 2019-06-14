@@ -54,8 +54,7 @@
 	        	<span class="navbar-text">
 	        		
 			     	
-			    </span
-	          <li class="nav-item dropdown">
+			    </span li class="nav-item dropdown">
 	            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	            	<img style="width: 35px;" src="assets/img_profil/<?php echo $avatar ?>">
 	              	<?php echo $nama; ?>

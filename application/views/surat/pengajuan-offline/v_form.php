@@ -39,14 +39,16 @@
             </div>
         
         <div>
-            <form action="../surat.php" method="POST" enctype="multipart/form-data">
+
+            
+            <form action="" method="POST" enctype="multipart/form-data">
+           
             <div class="row">
                 <div class="col-25">
                   <label for="lname">Nama </label>
                 </div>
                 <div class="col-75">
                   <input type="text" name="nama" id="nik" value="" autocomplete="off" class="css-input form-control" style="width:250px;">
-                
                 </div>
             </div>
             <div class="row">
@@ -82,6 +84,7 @@
                 </div>
             </div>
             </form>
+          
         </div>
       
         </div>

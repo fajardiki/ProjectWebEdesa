@@ -39,7 +39,7 @@
     
 
        <div style="margin-bottom:15px; margin-right: 10px;" >
-        <form action="<?php echo site_url('c_surat/cari');?>" method="post">
+        <form action="<?php echo site_url('c_surat/cariwarga');?>" method="post">
             <table>
                 <tr> 
                   <td width="900">

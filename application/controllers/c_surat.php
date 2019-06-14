@@ -63,7 +63,7 @@ class c_surat extends CI_Controller {
 		}
 
 
-		public function cari(){
+		public function cariwarga(){
 				$mencari = $this->input->post('input_cari');
 
 				$data = array(
@@ -78,16 +78,18 @@ class c_surat extends CI_Controller {
 		}
 
 		public function form(){
-			$btn = $this->
+			$pilih = $this->input->post('btnpilih');
 			$data = array(
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
-					'nik' => $this->m_user->getnikwarga($btn)
+					'nik' => $this->m_user->getnikwarga($pilih)
 				);
 
 			$this->load->view('surat/pengajuan-offline/v_form',$data);
 		} 
+
+
 
 		public function status_pengajuan(){
 			$data = array(
