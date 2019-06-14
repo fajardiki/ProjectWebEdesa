@@ -61,13 +61,15 @@
 		}
 
 		public function getnikwarga($nik) {
-			$query = $this->db->select("*")
-					-> from ('warga')
-					-> where ("nik = '$nik'")
-					-> get();
+			$query = $this->db->query("SELECT * FROM warga WHERE nik = '$nik'");
 				return $query->result();
 		}
 
+
+		public function tampilkan_datawarga() {
+			$query = $this->db->query("SELECT * FROM warga");
+				return $query->result();
+		}
 		public function status_pengajuan() {
 			$hsl = $this->db->query("CALL statuspengajuan();");
 			return $hsl->result_array();

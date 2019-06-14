@@ -24,7 +24,6 @@ class c_surat extends CI_Controller {
 
 
 		#menampilkan pengajuan_offline
-
 		public function pengajuan_offline(){
 			$data = array(
 					'head'=>'v_header',
@@ -36,7 +35,7 @@ class c_surat extends CI_Controller {
 			$this->load->view('surat/pengajuan-offline/v_fasilitas',$data);
 		} 
 
-		#menampilkan pengajuan onlie
+		#menampilkan pengajuan_onlie
 		public function pengajuan_online(){
 			$data = array(
 					'head'=>'v_header',
@@ -48,8 +47,7 @@ class c_surat extends CI_Controller {
 			$this->load->view('surat/pengajuan-online/v_permohonan_masuk',$data);
 		} 
 
-
-
+		#menampilkan nama surat
 		public function surat() {
 			$data = array(
 					'head'=>'v_header',
@@ -62,28 +60,15 @@ class c_surat extends CI_Controller {
 
 		}
 
-
-		public function cariwarga(){
-				$mencari = $this->input->post('input_cari');
-
-				$data = array(
-					'head'=>'v_header',
-					'foot'=>'v_footer',
-					'navbar'=>'v_navbar',
-					'surat' => $this->m_user->tampilkan_surat(),
-					'result' => $this->m_user->cari($mencari)
-				);
-				$this->load->view('surat/v_surat', $data);
-			
-		}
-
-		public function form(){
-			$pilih = $this->input->post('btnpilih');
+		#
+		public function pilih_data_warga(){
 			$data = array(
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
-					'nik' => $this->m_user->getnikwarga($pilih)
+					'warga' => $this->m_user->tampilkan_datawarga(),
+					'warga2' => $this->m_user->surat_fasilitas_offline(),
+
 				);
 
 			$this->load->view('surat/pengajuan-offline/v_form',$data);

@@ -40,17 +40,19 @@
         
         <div>
 
+             <?php foreach ($warga as $tampilkan) {
+                     ?>
             <form action="" method="POST" enctype="multipart/form-data"> 
             <div>
                 <div align="center">
                     <table>
                         <tr>
-                            <td  style="padding-bottom: 10px;"> <label for="lname">Nama </label> </td>
-                            <td  style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="nama" id="nik" value="" autocomplete="off" class="css-input form-control" style="width:250px;"> </td>
+                            <td style="padding-bottom: 10px;"> <label for="lname">Nama </label> </td>
+                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="nama" id="nama" value="<?php echo $tampilkan->nik; ?>" autocomplete="off" class="css-input form-control" style="width:250px;"> </td>
                         </tr>
                         <tr>
                             <td style="padding-bottom: 10px;"> <label for="country">NIK </label> </td>
-                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="nik" id="nama" value="" autocomplete="off" class="css-input form-control" style="width:250px;"> </td>
+                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="nik" id="nik" value="<?php echo $tampilkan->nik ?>" autocomplete="off" class="css-input form-control" style="width:250px;"> </td>
                         </tr>
                         <tr>
                             <td style="padding-bottom: 10px;"> <label for="subject">Jenis surat </label> </td>
@@ -68,6 +70,9 @@
                 </div>
             </div>
             </form>
+            <?php 
+          } 
+          ?>
 
         </div>
       

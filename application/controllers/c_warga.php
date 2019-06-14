@@ -58,5 +58,22 @@ class c_warga extends CI_Controller {
 		$this->load->view('admin/v_datawarga',$data);
 	}
 
+
+
+
+	public function cariwarga(){
+				$mencari = $this->input->post('input_cari');
+
+				$data = array(
+					'head'=>'v_header',
+					'foot'=>'v_footer',
+					'navbar'=>'v_navbar',
+					'surat' => $this->m_user->tampilkan_surat(),
+					'result' => $this->m_user->cari($mencari)
+				);
+				$this->load->view('surat/v_surat', $data);
+			
+		}
+
 }
 ?>
