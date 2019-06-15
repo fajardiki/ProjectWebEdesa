@@ -9,13 +9,16 @@ class c_statuspengajuan extends CI_Controller{
 
 	public function index()
 	{
+		$nik = $this->uri->segment(3);
 		$data = array(
 			'head'=>'v_header',
 			'foot'=>'v_footer',
-			'navbar'=>'v_navbar'
+			'navbar'=>'v_navbar',
+			'status'=>$this->m_user->surat_statuspengajuan($nik)
 		);
-
+		
 		$this->load->view('warga/v_statuspengajuan',$data);
+
 	}
 }
 ?>

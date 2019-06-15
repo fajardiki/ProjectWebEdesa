@@ -2,6 +2,7 @@
 		<?php $nama = $this->session->userdata('user'); ?>
 		<?php foreach ($nama as $us) {
 			$nama = $us['nama'];
+			$nik = $us['nik'];
 			$status = $us['status'];
 			$avatar = $us['avatar'];
 		} ?>
@@ -113,7 +114,7 @@
 	            </a>
 	            <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdownMenuLink">
 	              <a class="dropdown-item" href="<?php echo base_url().'c_listsurat' ?>">Formulir pengajuan</a>
-	              <a class="dropdown-item" href="<?php echo base_url().'c_statuspengajuan' ?>">Cek status pengajuan</a>
+	              <a class="dropdown-item" href="<?php echo base_url().'c_statuspengajuan/index/'.$nik; ?>">Cek status pengajuan</a>
 	            </div>
 	          </li>
 	        </ul>
