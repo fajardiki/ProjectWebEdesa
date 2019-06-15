@@ -58,9 +58,8 @@
                   <td><?php echo $tampilkan->nama ?></td>
                   <td><?php echo $tampilkan->nama_surat ?></td>
                   <td><?php echo $tampilkan->tanggal_pengajuan ?></td>
-                  <td><?php echo $tampilkan->status ?></td>
-                  <td align="center"><a href="data_pengajuan.php?nik=<?php echo $skdata['nik'] ?>" class="btn btn-info btn-sm">Pilih </a></td>
-                </tr>
+                  <td><?php echo $tampilkan->status_pengajuan ?></td>
+                  <td align="center"><a href="<?php echo base_url().'c_surat/pengajuan_online/'.$tampilkan->nik; ?>" class="btn btn-info btn-sm" name="btnpilih">Pilih </a></td>
               </tbody>
               <?php 
                 }
