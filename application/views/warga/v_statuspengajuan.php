@@ -19,21 +19,46 @@
 
       <?php $this->load->view($navbar); ?>
 
-      
-    <!-- footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <p>&copy; copyright | build by. <a href="#">Apa Aja</a></p>
-            <p><a href="" class="btn btn-primary">Facebook desa</a></p>
+      <!-- isi -->
+
+    <div class="container" id="isi">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="judul">
+            <br>
+            <h1 align="center">Status pengajuan</h1>
+            <br>
+          </div>
+          <div class="table">
+            <table class="table table-bordered">
+              <thead>
+                <tr align="center">
+                  <th>NIK</th>
+                  <th>Jenis Surat</th>
+                  <th>Tanggal</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <?php foreach ($status->result_array() as $sp) { ?>
+              <tbody>
+                
+                <tr>
+                  <td><?php echo $sp['nik'] ?></td>
+                  <td><?php echo $sp['nama_surat'] ?></td>
+                  <td><?php echo $sp['tanggal_pengajuan'] ?></td>
+                  <td><?php echo $sp['status_pengajuan'] ?></td>
+                </tr>
+                
+              </tbody>
+              <?php } ?>
+            </table>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- akhir footer -->
+    </div>
+    <!-- akhir isi -->
+<?php $this->load->view($foot) ?>
   </div>
-
   <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
