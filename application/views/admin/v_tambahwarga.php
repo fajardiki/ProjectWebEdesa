@@ -1,3 +1,9 @@
+<?php $nama = $this->session->userdata('user'); ?>
+  <?php foreach ($nama as $us) {
+      $name = $us['nama'];
+      $status = $us['status'];
+      $avatar = $us['avatar'];
+    } ?>
 <!DOCTYPE html>
  <html>
  <head>
@@ -68,14 +74,16 @@ input[type=submit]:hover {
   <!-- Form -->
   <div class="container">
     <form action="" method="POST">
+
       <div class="row">
         <div class="col-25">
-          <label for="fname">NKK : </label>
+          <label for="lname">NKK : </label>
         </div>
         <div class="col-75">
-          <select name="nkk">
-          </select>
+          <input type="text" name="nkk" id="nkk" placeholder="nkk" autocomplete="off">
         </div>
+
+
       </div>
       <div class="row">
         <div class="col-25">
@@ -84,6 +92,8 @@ input[type=submit]:hover {
         <div class="col-75">
           <input type="text" name="nik" id="nik" placeholder="nik" autocomplete="off">
         </div>
+
+
       </div>
       <div class="row">
         <div class="col-25">
