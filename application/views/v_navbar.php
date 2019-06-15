@@ -1,13 +1,16 @@
 <!-- navbar -->
 		<?php $nama = $this->session->userdata('user'); ?>
 		<?php foreach ($nama as $us) {
-			$nama = $us['nama'];
-			$nik = $us['nik'];
 			$status = $us['status'];
-			$avatar = $us['avatar'];
 		} ?>
 
 		<?php if ($status == 'admin') { ?>
+
+		<?php foreach ($nama as $ad) {
+			$nama = $ad['nama'];
+			$status = $ad['status'];
+			$avatar = $ad['avatar'];
+		} ?>
 
 	    <nav class="navbar navbar-expand-md bg-warning navbar-light" id="navbar">
 	      <!-- Brand -->
@@ -82,7 +85,14 @@
 	    </nav>
 	    <!-- akhir navbar -->
 
+
 	    <?php } elseif ($status == 'warga') { ?>
+
+	    <?php foreach ($nama as $wa) {
+			$nama = $wa['nama'];
+			$nik = $wa['nik'];
+			$avatar = $wa['avatar'];
+		} ?>
 
 	    <!-- navbar -->
 	    <nav class="navbar navbar-expand-md bg-warning navbar-light" id="navbar">
