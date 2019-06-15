@@ -1,12 +1,16 @@
 <!-- navbar -->
 		<?php $nama = $this->session->userdata('user'); ?>
 		<?php foreach ($nama as $us) {
-			$nama = $us['nama'];
 			$status = $us['status'];
-			$avatar = $us['avatar'];
 		} ?>
 
 		<?php if ($status == 'admin') { ?>
+
+		<?php foreach ($nama as $ad) {
+			$nama = $ad['nama'];
+			$status = $ad['status'];
+			$avatar = $ad['avatar'];
+		} ?>
 
 	    <nav class="navbar navbar-expand-md bg-warning navbar-light" id="navbar">
 	      <!-- Brand -->
@@ -81,7 +85,14 @@
 	    </nav>
 	    <!-- akhir navbar -->
 
+
 	    <?php } elseif ($status == 'warga') { ?>
+
+	    <?php foreach ($nama as $wa) {
+			$nama = $wa['nama'];
+			$nik = $wa['nik'];
+			$avatar = $wa['avatar'];
+		} ?>
 
 	    <!-- navbar -->
 	    <nav class="navbar navbar-expand-md bg-warning navbar-light" id="navbar">
@@ -113,7 +124,7 @@
 	            </a>
 	            <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdownMenuLink">
 	              <a class="dropdown-item" href="<?php echo base_url().'c_listsurat' ?>">Formulir pengajuan</a>
-	              <a class="dropdown-item" href="<?php echo base_url().'c_statuspengajuan' ?>">Cek status pengajuan</a>
+	              <a class="dropdown-item" href="<?php echo base_url().'c_statuspengajuan/index/'.$nik; ?>">Cek status pengajuan</a>
 	            </div>
 	          </li>
 	        </ul>

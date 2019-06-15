@@ -86,5 +86,10 @@
     		return $hsl;
   		}
 
+  		public function surat_statuspengajuan($nik) {
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat  ON permohonan.kode_surat = surat.kode_surat WHERE nik = '$nik'");
+				return $query;
+		}
+
 	}
 ?>
