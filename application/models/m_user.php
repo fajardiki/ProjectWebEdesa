@@ -67,12 +67,12 @@
 
 
 		public function tampilkan_datawarga() {
-			$query = $this->db->query("SELECT * FROM warga");
+			$query = $this->db->query("SELECT * FROM warga ");
 				return $query->result();
 		}
 		public function status_pengajuan() {
-			$hsl = $this->db->query("CALL statuspengajuan();");
-			return $hsl->result_array();
+			$hsl = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan = 'Diproses'");
+			return $hsl;
 		}
 
 		
@@ -86,10 +86,21 @@
     		return $hsl;
   		}
 
+
+  		public function status_proses(){
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Diproses' WHERE nik=$nik");
+			return $query;
+  		}
+
+
+  		public function status_selesai(){
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Selesai' WHERE nik=$nik");
+			return $query;
+  		}
+
   		public function surat_statuspengajuan($nik) {
 			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat  ON permohonan.kode_surat = surat.kode_surat WHERE nik = '$nik'");
 				return $query;
 		}
-
 	}
 ?>
