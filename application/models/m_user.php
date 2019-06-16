@@ -82,8 +82,8 @@
 			return $hsl;
 		}
 
-		public function insert($data) {
-    		$hsl = $this->db->query("INSERT INTO permohonan VALUES('$nik','','','','$nameFile2','$nameFile1','$keperluan','Diajukan','$ksurat','admin')");
+		public function insert_pengajuan($nik, $gambarktp, $gambarkk, $keperluan, $kode_surat) {
+    		$hsl = $this->db->query("INSERT INTO permohonan VALUES('$nik','','','','$gambarktp','$gambarkk','$keperluan','$kode_surat','admin','Diajukan')");
     		return $hsl;
   		}
 
@@ -100,7 +100,7 @@
   		}
 
   		public function surat_statuspengajuan($nik) {
-			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat  ON permohonan.kode_surat = surat.kode_surat WHERE nik = '$nik'");
+			$query = $this->db->query("SELECT * FROM permohonan LEFT JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE nik = '$nik'");
 			return $query;
 		}
 
@@ -122,6 +122,11 @@
 		public function suratditolak(){
 			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan='Tolak'");
 			return $query->result();
+		}
+
+		public function updatefotoprofile($nik, $fotoprofile) {
+			$query = $this->db->query("UPDATE warga SET avatar='$fotoprofile' WHERE nik= '$nik'");
+			return $query;
 		}
 
 

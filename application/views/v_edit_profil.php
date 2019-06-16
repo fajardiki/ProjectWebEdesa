@@ -3,7 +3,7 @@
 	<?php foreach ($nama as $us) {
   		$name = $us['nama'];
   		$status = $us['status'];
-  		$avatar = $us['avatar'];
+  		$img = $us['avatar'];
    	} ?>
 
    		<!doctype html>
@@ -38,7 +38,10 @@
 		  	<div class="container-fluid mt-4 mb-4">
 		  		<div class="row">
 		  			<div class="col-sm-3">
-		  				<img src="assets/img_profil/<?php echo $img ?>" style=" width: 220px; height: 220px;" class="img-circle img-fluid">
+		  			<?php foreach ($warga as $wk) {
+		  				$ava = $wk['avatar'];
+		  			} ?>
+		  				<img src="assets/img_profil/<?php echo $ava ?>" style=" width: 220px; height: 220px;" class="img-circle img-fluid">
 		  				<table class="info-bio">
 			              <tr>
 			                <td width="60">Nama </td>
@@ -56,7 +59,7 @@
 		  			<div class="col-sm-1"></div>
 
 		  			<div class="col-sm3">
-		  				<form method="post" enctype="multipart/form-data">
+		  				<form action="<?php echo base_url().'c_editprofile/uploudfotoprofile' ?>" method="POST" enctype="multipart/form-data">
 					        <div>
 					                <div>
 					                    <script type="text/javascript">
@@ -129,6 +132,8 @@
 			$nik = $w['nik'];
 		} ?>
 
+		<?php echo $img; ?>
+
 	  	<div class="container-fluid">
 		  	<!-- Header -->
 		  	<?php $this->load->view($head) ?>
@@ -139,7 +144,7 @@
 		  	<div class="container-fluid mt-4 mb-4">
 		  		<div class="row">
 		  			<div class="col-sm-3">
-		  				<img src="assets/img_profil/<?php echo $avatar ?>" style=" width: 220px; height: 220px;" class="img-circle img-fluid">
+		  				<img src="assets/img_profil/<?php echo $img; ?>" style=" width: 220px; height: 220px;" class="img-circle img-fluid">
 		  				<table class="info-bio">
 			              <tr>
 			                <td width="60">Nama </td>
@@ -157,7 +162,7 @@
 		  			<div class="col-sm-1"></div>
 
 		  			<div class="col-sm3">
-		  				<form method="post" enctype="multipart/form-data">
+		  				<form action="<?php echo base_url().'c_editprofile/uploudfotoprofile' ?>" method="post" enctype="multipart/form-data">
 					        <div>
 					                <div>
 					                    <script type="text/javascript">
@@ -180,6 +185,9 @@
 					                    </div>
 					                </div>
 					                <div>
+					                	<div class="col-75" hidden="true">
+							                <input type="text" name="nik" id="nama" value="<?php echo $nik; ?>" autocomplete="off">
+							              </div>
 					                    <div>
 					                      <input id="uploadgambar" name="gambar" type="file" onchange="PreviewImage() ;" class="mt-2">
 					                    </div>
