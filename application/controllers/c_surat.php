@@ -60,7 +60,7 @@ class c_surat extends CI_Controller {
 
 		}
 
-		#
+		#form daftar surat
 		public function pilih_data_warga(){
 			$data = array(
 					'head'=>'v_header',
@@ -116,7 +116,7 @@ class c_surat extends CI_Controller {
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
-					'nik' => $this->m_user->datasuratform($kdsurat)
+					'nik' =>$this->m_user->datasuratform($kdsurat)
 				);
 
 			$this->load->view('surat\pengajuan-online\v_from',$data);
@@ -133,10 +133,11 @@ class c_surat extends CI_Controller {
 			if (!empty($_FILES['gambarktp']['name'])) {
 				$upload = $this->_do_upload();
 				$data['gambarktp'] = $upload;
+
 			}
 
-			var_dump($data);
-			// $this->User_model->insert($data);
+			//var_dump($data);
+			$this->load->view('warga\v_statuspengajuan');
 		}
 
 		private function _do_upload() {

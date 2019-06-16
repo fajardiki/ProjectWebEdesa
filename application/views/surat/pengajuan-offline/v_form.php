@@ -48,7 +48,7 @@
                     <table>
                         <tr>
                             <td style="padding-bottom: 10px;"> <label for="lname">Nama </label> </td>
-                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="nama" id="nama" value="<?php echo $tampilkan->nik; ?>" autocomplete="off" class="css-input form-control" style="width:250px;"> </td>
+                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="nama" id="nama" value="<?php echo $tampilkan->nama; ?>" autocomplete="off" class="css-input form-control" style="width:250px;"> </td>
                         </tr>
                         <tr>
                             <td style="padding-bottom: 10px;"> <label for="country">NIK </label> </td>

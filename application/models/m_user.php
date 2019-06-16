@@ -71,7 +71,7 @@
 				return $query->result();
 		}
 		public function status_pengajuan() {
-			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan = 'Selesai'");
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat");
 			return $query->result();
 		}
 
@@ -81,7 +81,7 @@
 			return $hsl;
 		}
 
-		public function insert($data) {
+		public function status_diajukan($data) {
     		$hsl = $this->db->query("INSERT INTO permohonan VALUES('$nik','','','','$nameFile2','$nameFile1','$keperluan','Diajukan','$ksurat','admin')");
     		return $hsl;
   		}
