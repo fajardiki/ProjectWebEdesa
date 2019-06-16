@@ -122,6 +122,33 @@ class c_pengarsipan extends CI_Controller {
 		$this->load->view('pengarsipan/v_arsip_suratpengajuan',$data);
 		}
 
+
+		public function backupdb() {
+		$data = array(
+				'head'=>'v_header',
+				'foot'=>'v_footer',
+				'navbar'=>'v_navbar',
+				'tittle' => 'Backup',
+				'side8' => 'v_backup',
+				'show' => $this->m_user->showdb()
+				
+				
+			);
+		$this->load->view('pengarsipan/v_backuprestore',$data);
+		}
+
+		public function restoredb() {
+		$data = array(
+				'head'=>'v_header',
+				'foot'=>'v_footer',
+				'navbar'=>'v_navbar',
+				'tittle' => 'Restore',
+				'side9' => 'v_restore',
+				
+				
+			);
+		$this->load->view('pengarsipan/v_backuprestore',$data);
+		}
 }
 
 ?>

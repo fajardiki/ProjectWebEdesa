@@ -50,7 +50,7 @@
 	              <a class="dropdown-item" href="<?php echo base_url('c_pengarsipan/hutdesa') ?>">Arsip Dokumentasi Kegiatan</a>
 	              <a class="dropdown-item" href="<?php echo base_url('c_pengarsipan/arsip_datapengajuan') ?>">Arsip Data Pengajuan</a>
 	              <a class="dropdown-item" href="<?php echo base_url('c_pengarsipan/arsip_suratmasuk') ?>">Arsip Surat Pengajuan</a>
-	              <a class="dropdown-item" href="backupandrestore.php">Backup dan Restore</a>
+	              <a class="dropdown-item" href="<?php echo base_url('c_pengarsipan/backupdb') ?>">Backup dan Restore</a>
 	            </div>
 	          </li>
 	          <li class="nav-item"> 

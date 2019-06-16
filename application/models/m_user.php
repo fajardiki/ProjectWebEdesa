@@ -17,6 +17,11 @@
 	 		}
 		}
 
+		public function showdb(){
+			$query = $this->db->query("SHOW DATABASES");
+			return $query;
+		}
+
 		public function getslideshow() {
 			$hsl = $this->db->query("SELECT * FROM slideshow");
 			return $hsl;
