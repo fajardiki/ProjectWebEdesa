@@ -29,6 +29,7 @@
 
 		// 
 		#pemaggilan data ke database surat
+		#untuk admin
 		public function surat_fasilitas_offline() {
 			$query = $this->db->select("*")
 					-> from ('surat')
@@ -36,7 +37,7 @@
 				return $query->result();
 		}
 
-
+		#untuk admin
 		public function surat_fasilitas_online() {
 			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan = 'Diajukan'");
 				return $query->result();
@@ -71,7 +72,7 @@
 				return $query->result();
 		}
 		public function status_pengajuan() {
-			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan = 'Selesai'");
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan != 'Diajukan'");
 			return $query->result();
 		}
 
@@ -100,7 +101,29 @@
 
   		public function surat_statuspengajuan($nik) {
 			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat  ON permohonan.kode_surat = surat.kode_surat WHERE nik = '$nik'");
-				return $query;
+			return $query;
 		}
+
+		public function arsip_datapengajuan(){
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat=surat.kode_surat");
+			return $query->result();
+		}
+
+		public function suratmasuk(){
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan='Diajukan' OR status_pengajuan='Diproses'");
+			return $query->result();
+		}
+
+		public function suratkeluar(){
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan='Selesai'");
+			return $query->result();
+		}
+
+		public function suratditolak(){
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan='Tolak'");
+			return $query->result();
+		}
+
+
 	}
 ?>

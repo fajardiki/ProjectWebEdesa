@@ -44,10 +44,9 @@
             <div class="col-sm-3 sidebar">
               <div class=" pb-2" id="sidebar">
                  <ul class="list-group ">
-                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/hutdesa' ?>">HUT Desa</a></li>
-                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/rapat_bulanan' ?>">Rapat Bulanan</a></li>
-                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/lomba_agustusan' ?>">Lomba Agustusan</a></li>
-                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/posyandu' ?>">Posyandu</a></li>
+                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/arsip_suratmasuk' ?>">Surat Masuk </a></li>
+                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/arsip_suratkeluar' ?>">Surat Keluar</a></li>
+                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/arsip_suratditolak' ?>">Surat Ditolak</a></li>
                 </ul>
               </div>
             </div>
@@ -56,16 +55,14 @@
         
               <div class="col-sm-9 isi_sbar ">
                   <ul class="list-group">
-                      <li class="list-group-item ">
+                      <li class="list-group-item " style="height: 100%;">
                       <?php 
-                          if (isset($side1)) {
-                              $this->load->view('pengarsipan/dokumentasi/'.$side1);
-                          } elseif (isset($side2)) {
-                              $this->load->view('pengarsipan/dokumentasi/'.$side2);
-                          } elseif (isset($side3)) {
-                              $this->load->view('pengarsipan/dokumentasi/'.$side3);
-                          } else {
-                              $this->load->view('pengarsipan/dokumentasi/'.$side4);
+                          if (isset($side5)) {
+                              $this->load->view('pengarsipan/surat/'.$side5);
+                          } elseif (isset($side6)) {
+                              $this->load->view('pengarsipan/surat/'.$side6);
+                          } else{
+                              $this->load->view('pengarsipan/surat/'.$side7);
                           }
                       ?>
                       </li>
