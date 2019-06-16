@@ -38,7 +38,7 @@
 
 
 		public function surat_fasilitas_online() {
-			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga  ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan = 'Diajukan'");
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan = 'Diajukan'");
 				return $query->result();
 		}
 
@@ -71,8 +71,8 @@
 				return $query->result();
 		}
 		public function status_pengajuan() {
-			$hsl = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan = 'Diproses'");
-			return $hsl;
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan = 'Selesai'");
+			return $query->result();
 		}
 
 		
