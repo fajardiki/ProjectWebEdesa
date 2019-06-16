@@ -44,10 +44,8 @@
             <div class="col-sm-3 sidebar">
               <div class=" pb-2" id="sidebar">
                  <ul class="list-group ">
-                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/hutdesa' ?>">HUT Desa</a></li>
-                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/rapat_bulanan' ?>">Rapat Bulanan</a></li>
-                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/lomba_agustusan' ?>">Lomba Agustusan</a></li>
-                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/posyandu' ?>">Posyandu</a></li>
+                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/backupdb' ?>">Backup Database</a></li>
+                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/restoredb' ?>">Restore Database</a></li>
                 </ul>
               </div>
             </div>
@@ -58,14 +56,10 @@
                   <ul class="list-group">
                       <li class="list-group-item" style="height: 100%;">
                       <?php 
-                          if (isset($side1)) {
-                              $this->load->view('pengarsipan/dokumentasi/'.$side1);
-                          } elseif (isset($side2)) {
-                              $this->load->view('pengarsipan/dokumentasi/'.$side2);
-                          } elseif (isset($side3)) {
-                              $this->load->view('pengarsipan/dokumentasi/'.$side3);
+                          if (isset($side8)) {
+                              $this->load->view('pengarsipan/backuprestore/'.$side8);
                           } else {
-                              $this->load->view('pengarsipan/dokumentasi/'.$side4);
+                              $this->load->view('pengarsipan/backuprestore/'.$side9);
                           }
                       ?>
                       </li>
