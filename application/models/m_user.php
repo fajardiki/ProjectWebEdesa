@@ -87,14 +87,14 @@
   		}
 
 
-  		public function status_proses(){
-  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Diproses' WHERE nik=$nik");
+  		public function status_proses($nik){
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Diproses' WHERE nik= '$nik'");
 			return $query;
   		}
 
 
-  		public function status_selesai(){
-  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Selesai' WHERE nik=$nik");
+  		public function status_selesai($nik){
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Selesai' WHERE nik= '$nik'");
 			return $query;
   		}
 

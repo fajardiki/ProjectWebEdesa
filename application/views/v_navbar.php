@@ -14,7 +14,9 @@
 
 	    <nav class="navbar navbar-expand-md bg-warning navbar-light" id="navbar">
 	      <!-- Brand -->
-	      <a class="navbar-brand" href="<?php echo base_url().'c_dasbord' ?>">Home</a>
+	      <a class="navbar-brand" align="" href="<?php echo base_url().'c_dasbord' ?>">E-DESA</a>
+	      
+
 
 	      <!-- Toggler/collapsibe Button -->
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -24,6 +26,10 @@
 	      <!-- Navbar links -->
 	      <div class="collapse navbar-collapse" id="collapsibleNavbar">
 	        <ul class="navbar-nav mr-auto">
+
+	       		<li class="nav-item"> 
+	            <a class="nav-link" href="<?php echo base_url().'c_dasbord' ?>">Home</a>
+	        	</li>
 
 	          <li class="nav-item dropdown">
 	            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -41,7 +47,7 @@
 	              Pengarsipan
 	            </a>
 	            <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdownMenuLink">
-	              <a class="dropdown-item" href="arsipdokumentasikegiatan.php">Arsip Dokumentasi Kegiatan</a>
+	              <a class="dropdown-item" href="<?php echo base_url('c_pengarsipan') ?>">Arsip Dokumentasi Kegiatan</a>
 	              <a class="dropdown-item" href="../pengarsipan/datapengajuan.php">Arsip Data Pengajuan</a>
 	              <a class="dropdown-item" href="../pengarsipan/formsuratkeluardata.php">Arsip Surat Pengajuan</a>
 	              <a class="dropdown-item" href="backupandrestore.php">Backup dan Restore</a>

@@ -88,26 +88,28 @@ class c_surat extends CI_Controller {
 		} 
 
 		public function status_selesai(){
+			$nik = $this->uri->segment(3);
 			$data = array(
 			'head'=>'v_header',
 			'foot'=>'v_footer',
 			'navbar'=>'v_navbar',
-			'selesai'=>$this->m_user->status_selesai(),
+			'selesai'=>$this->m_user->status_selesai($nik),
 		);
 		
-		$this->load->view('warga/v_statuspengajuan',$data);
+		$this->load->view('surat/v_status_pengajuan',$data);
 	}
 
 
 	public function status_proses(){
+		$nik = $this->uri->segment(3);
 		$data = array(
 			'head'=>'v_header',
 			'foot'=>'v_footer',
 			'navbar'=>'v_navbar',
-			'proses'=>$this->m_user->status_diproses(),
+			'proses'=>$this->m_user->status_diproses($nik),
 		);
 		
-		$this->load->view('warga/v_statuspengajuan',$data);
+		$this->load->view('surat/v_status_pengajuan',$data);
 	}
 
 		public function formpengajuan() {
