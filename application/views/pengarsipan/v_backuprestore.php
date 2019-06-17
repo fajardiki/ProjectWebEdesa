@@ -67,6 +67,7 @@
               </div>
       </div>
     </div>
+    <br>
 
         <!-- akhir isi sidebar -->
 

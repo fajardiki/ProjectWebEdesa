@@ -1,5 +1,5 @@
     <!-- header -->
-    <div class="bg-dark" id="header">
+    <div class="bg-dark" style="border-radius: 4px;" id="header">
       <div class="container-fluid">
         <div class="row" id="headrow">
           <div class="col" id="text-header">

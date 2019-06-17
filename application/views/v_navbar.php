@@ -12,7 +12,7 @@
 			$avatar = $ad['avatar'];
 		} ?>
 
-	    <nav class="navbar navbar-expand-md bg-warning navbar-light" id="navbar">
+	    <nav class="navbar navbar-expand-md bg-warning navbar-light" id="navbar" style="border-radius: 4px;">
 	      <!-- Brand -->
 	      <a class="navbar-brand" align="" href="<?php echo base_url().'c_dasbord' ?>">E-DESA</a>
 	      

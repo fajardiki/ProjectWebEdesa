@@ -19,7 +19,7 @@
 
 		public function showdb(){
 			$query = $this->db->query("SHOW DATABASES");
-			return $query;
+			return $query->result();
 		}
 
 		public function getslideshow() {
@@ -132,6 +132,11 @@
 		public function updatefotoprofile($nik, $fotoprofile) {
 			$query = $this->db->query("UPDATE warga SET avatar='$fotoprofile' WHERE nik= '$nik'");
 			return $query;
+		}
+
+		public function databackup(){
+			$query = $this->db->query("SELECT * FROM databackup");
+			return $query->result();
 		}
 
 
