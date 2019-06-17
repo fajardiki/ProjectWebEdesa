@@ -34,7 +34,7 @@
         <div class="col-sm-12">
             <div class="judul">
               <br>
-              <h1 align="center">Daftar Surat</h1>
+              <h2 align="center"> <strong> Form Surat </strong> </h2>
               <br>
             </div>
         
@@ -62,7 +62,7 @@
                         } ?>
 
                         <div class="col-75" hidden="true">
-                          <input type="text" name="ksurat" id="nama" value="<?php echo $kodesurat; ?>" autocomplete="off">
+                          <input type="text" name="ksurat" id="nama" value="" autocomplete="off">
                         </div>
                         
                         <tr>

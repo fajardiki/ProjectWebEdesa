@@ -35,7 +35,7 @@
         <div class="col-sm-12">
           <div class="judul">
             <br>
-           <h2 align="center"> <strong> Status Pengajuan </strong> </h1>
+           <h2 align="center"> <strong> Status Pengajuan </strong> </h2>
             <br>
           </div>
           <div class="table">

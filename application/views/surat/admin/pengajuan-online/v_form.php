@@ -16,6 +16,7 @@
 
     <title>Daftar Surat</title>
 
+  
     <style>
      * {
   box-sizing: border-box;
@@ -87,39 +88,27 @@
       <!-- navbar -->
       <?php $this->load->view($navbar) ?>
       <!-- akhir navbar -->
-
-      <?php $nama = $this->session->userdata('user'); ?>
-      <?php foreach ($nama as $us) {
-        $namauser = $us['nama'];
-        $niks = $us['nik'];
-      } ?>
-
-      <?php foreach ($nik->result_array() as $nk) {
-        $namas = $nk['nama_surat'];
-        $kodesurat = $nk['kode_surat'];
-      } ?>
     
       <!-- isi -->
-    <div class="container" id="isi">
+
+
+
+ <div class="container" id="isi">
       <div class="row">
         <div class="col-sm-12">
           <div class="judul">
             <br>
-            <h2 align="center"> <strong> Daftar Surat </strong> </h1>
+            <h2 align="center"> <strong> Data Pengajuan Pemohon </strong> </h1>
             <br>
           </div>
-          <form action="<?php echo base_url().'c_surat/uploudpengajuan' ?>" method="POST" enctype="multipart/form-data">
+          <form action="" method="POST" enctype="multipart/form-data">
             <div class="row">
-
-              <div class="col-75" hidden="true">
-                <input type="text" name="ksurat" id="nama" value="<?php echo $kodesurat; ?>" autocomplete="off">
-              </div>
 
               <div class="col-25">
                 <label for="lname">Nama </label>
               </div>
               <div class="col-75">
-                <input type="text" name="nama" id="nama" value="<?php echo $namauser; ?>" autocomplete="off">
+                <input type="text" name="nama" id="nama" value="" autocomplete="off">
               </div>
             </div>
             <div class="row">
@@ -127,7 +116,7 @@
                 <label for="country">NIK </label>
               </div>
               <div class="col-75">
-                 <input type="text" name="nik" id="nik" value="<?php echo $niks; ?>" autocomplete="off">
+                 <input type="text" name="nik" id="nik" value="" autocomplete="off">
               </div>
             </div>
             <div class="row">
@@ -151,7 +140,7 @@
                 <label for="subject">Jenis surat </label>
               </div>
               <div class="col-75">
-                <input type="text" name="jenis" id="umur" value="<?php echo $namas; ?>" 
+                <input type="text" name="jenis" id="umur" value="" 
                 autocomplete="off">
                 <input type="hidden" name="ks" value="">
               </div>
@@ -175,8 +164,8 @@
         </div>
       </div>
     </div>
-    <br>
-    <!-- akhir isi -->
+
+      <!-- akhir isi -->
 
       <!-- Footer -->
       <?php $this->load->view($foot) ?>

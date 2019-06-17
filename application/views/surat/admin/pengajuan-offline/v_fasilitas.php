@@ -34,7 +34,7 @@
           
           <div class="judul">
             <br>
-            <h1 align="center">Surat pengajuan</h1>
+            <h2 align="center"> <strong> Surat Pengajuan </strong> </h2>
             <br>
           </div>
           

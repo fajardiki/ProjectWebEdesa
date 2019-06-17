@@ -33,7 +33,7 @@
         <div class="col-sm-12">
           <div class="judul">
             <br>
-            <h2 align="center"> <strong> Pengajuan Surat </strong> </h1>
+            <h2 align="center"> <strong> Pengajuan Surat </strong> </h2>
             <br>
           </div>
          <div style="margin-bottom:15px; margin-right: 10px;" >
@@ -59,7 +59,7 @@
                   <td><?php echo $tampilkan->nama_surat ?></td>
                   <td><?php echo $tampilkan->tanggal_pengajuan ?></td>
                   <td><?php echo $tampilkan->status_pengajuan ?></td>
-                  <td align="center"><a href="<?php echo base_url().'c_surat/pengajuan_online/'.$tampilkan->nik; ?>" class="btn btn-info btn-sm" name="btnpilih">Pilih </a></td>
+                  <td align="center"><a href="<?php echo base_url().'c_surat/formpengajuanadmin/'.$tampilkan->nik; ?>" class="btn btn-info btn-sm" name="btnpilih">Pilih </a></td>
               </tbody>
               <?php 
                 }
