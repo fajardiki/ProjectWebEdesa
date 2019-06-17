@@ -223,6 +223,7 @@ class c_surat extends CI_Controller {
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
+					'tolak' => $this->m_user->status_tolak()
 				);
 
 			$this->load->view('surat/jenis_surat/v_cetak_surat',$data);
