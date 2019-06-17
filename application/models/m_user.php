@@ -158,10 +158,10 @@
 			return $query->result();
 		}
 
-		public function editPengumuman($judul, $isi, $gambar){
-			$editPengumuman = $this->db->query("INSERT INTO pengumaman VALUES '', judul_pengumuman ='$judul', isi_pengumuman ='$isi', gambar_pengumuman='$gambar', ''");
-			return $editPengumuman->result_array();
+		public function insertpengumuman($nama, $isi, $fotopengumuman){
+			$editPengumuman = $this->db->query("INSERT INTO pengumuman VALUES ('', '$nama', '$isi', '$fotopengumuman', '')");	
 		}
+
 
 		public function lihatpengumuman(){
 			$query = $this->db->query("SELECT * FROM pengumuman");
@@ -173,8 +173,8 @@
 			return $query;
 		}
 
-		public function tambahSlideshow(){
-			$tambahSlideshow = $this->db->query("INSERT INTO slideshow");
+		public function insertslide($nama, $isi, $fotoslide){
+			$query = $this->db->query("INSERT INTO slideshow VALUES ('', '$nama', '$isi', '$fotoslide', '')");
 		}
 		
 	}

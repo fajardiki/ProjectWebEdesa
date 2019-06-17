@@ -1,7 +1,7 @@
     <!-- isi -->
 <div class="col-sm-11 utama-isi">
 
-        <form method="post" enctype="multipart/form-data">      
+    <form action="<?php echo base_url().'c_pengaturan/insertslideshow' ?>" method="post" enctype="multipart/form-data">      
         <div class="row ml-3">
 
         <div class="row">
@@ -19,7 +19,7 @@
                 </div>
                 <div class="mb-2">
                     <div>
-                      <textarea name="isi_pengumuman" class="atur_isi form-control" style="width: 400px; height: 220px;"></textarea>
+                      <textarea name="keterangan" class="atur_isi form-control" style="width: 400px; height: 220px;"></textarea>
                     </div>
                 </div>
 
