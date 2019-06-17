@@ -134,8 +134,21 @@ class c_surat extends CI_Controller {
 					'nik' =>$this->m_user->datasuratform($kdsurat)
 				);
 
-			$this->load->view('surat/warga/pengajuan-online/v_from',$data);
+			$this->load->view('surat/warga/pengajuan-online/v_form',$data);
 		}
+
+		public function formpengajuanadmin() {
+			$nik = $this->uri->segment(3);
+			$data = array(
+					'head'=>'v_header',
+					'foot'=>'v_footer',
+					'navbar'=>'v_navbar',
+					'showdt' =>$this->m_user->show_datapengajuan($nik)
+				);
+
+			$this->load->view('surat/admin/pengajuan-online/v_form',$data);
+		}
+
 
 		public function uploudpengajuan() {
 

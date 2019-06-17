@@ -86,6 +86,11 @@
 			return $hsl;
 		}
 
+		public function show_datapengajuan($nik) {
+			$query = $this->db->query("SELECT * FROM permohonan WHERE nik ='$nik'");
+			return $query;
+		}
+
 		public function insert_pengajuan($nik, $gambarktp, $gambarkk, $keperluan, $kode_surat) {
     		$hsl = $this->db->query("INSERT INTO permohonan VALUES('$nik','','','','$gambarktp','$gambarkk','$keperluan','$kode_surat','admin','Diajukan')");
     		return $hsl;
