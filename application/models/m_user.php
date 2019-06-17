@@ -19,7 +19,7 @@
 
 		public function showdb(){
 			$query = $this->db->query("SHOW DATABASES");
-			return $query;
+			return $query->result();
 		}
 
 		public function getslideshow() {
@@ -138,8 +138,12 @@
 			return $query;
 		}
 
+
 		public function getpengajuan($nik) {
 			$query = $this->db->query("SELECT * FROM warga LEFT JOIN kartu_keluarga ON warga.nkk = kartu_keluarga.nkk LEFT JOIN kode_pos ON kartu_keluarga.kode_pos = kode_pos.kode_pos WHERE warga.nik='$nik'");
+
+		public function databackup(){
+			$query = $this->db->query("SELECT * FROM databackup");
 			return $query->result();
 		}
 

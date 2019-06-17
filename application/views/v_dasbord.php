@@ -187,11 +187,12 @@
 						<li class="list-group-item">Vestibulum at eros</li>
 					</ul>
 				</div>
+
 			</div>
-		</div>	
+<br>
 		<!-- Akhir Pengumuman -->
 
-		<!-- Akhir Isi -->
+	<!-- Akhir Isi -->
 
 	  	<!-- Footer -->
 	  	<?php $this->load->view($foot) ?>

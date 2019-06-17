@@ -130,7 +130,8 @@ class c_pengarsipan extends CI_Controller {
 				'navbar'=>'v_navbar',
 				'tittle' => 'Backup',
 				'side8' => 'v_backup',
-				'show' => $this->m_user->showdb()
+				'show' => $this->m_user->showdb(),
+				'bckp' => $this->m_user->databackup()
 				
 				
 			);

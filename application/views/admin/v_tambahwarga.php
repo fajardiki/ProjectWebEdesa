@@ -77,10 +77,14 @@ input[type=submit]:hover {
 
       <div class="row">
         <div class="col-25">
-          <label for="lname">NKK : </label>
+          <label for="lname">NKK </label>
         </div>
         <div class="col-75">
-          <input type="text" name="nkk" id="nkk" placeholder="nkk" autocomplete="off">
+         <select type="tekt">
+            <?php foreach ($nkk as $db) { ?>
+                <option><?php echo $db->nkk; ?></option>
+            <?php } ?>
+      </select>
         </div>
 
 
@@ -116,7 +120,7 @@ input[type=submit]:hover {
           <label for="subject">Tanggal lahir </label>
         </div>
         <div class="col-75">
-          <input type="date" name="tanggal_lahir" id="tanggal_lahir" placeholder="tanggal lahir" autocomplete="off">
+          <input for="subject" type="date" name="tanggal_lahir" id="tanggal_lahir" placeholder="tanggal lahir" autocomplete="off">
         </div>
       </div>
       <div class="row">
@@ -173,8 +177,8 @@ input[type=submit]:hover {
       <div class="row">
         <div class="col-25">
         </div>
-        <div class="col-75">
-          <input class="btn-primary" type="submit" value="Submit" name="submit" autocomplete="off">
+        <div class="col-75" style="padding-top: 10px;">
+          <button  type="submit" name="submit" class="btn btn-info" style="float: right;">Tambahkan</button>
         </div>
         
       </div>

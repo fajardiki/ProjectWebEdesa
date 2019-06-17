@@ -16,7 +16,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Halaman Utama E-Desa</title>
+    <title>Status Pengajuan</title>
   </head>
 
   <body>
@@ -35,7 +35,7 @@
         <div class="col-sm-12">
           <div class="judul">
             <br>
-            <h1 align="center">Status pengajuan</h1>
+           <h2 align="center"> <strong> Status Pengajuan </strong> </h1>
             <br>
           </div>
           <div class="table">

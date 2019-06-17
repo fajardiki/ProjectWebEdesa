@@ -11,20 +11,17 @@
 		<form action="config/bckup.php" method="post">
 			<label>Pilih database :</label>
 			<br>
-		
-				<?php $this->load->$show ?>
-
-			<select type="tekt" name="dbname" style="padding: 5px; width: 200px;">
-				<?php while ($db = mysqli_fetch_array($dbase)) { ?>
-	              <option><?php echo $db['Database']; ?></option>
-	            <?php } ?>
+			<select type="tekt" name="dbname" style="padding: 5px; width: 200px; padding-bottom: 10px; margin-bottom: 10px;">
+			  <?php foreach ($show as $db) { ?>
+	              <option><?php echo $db->Database; ?></option>
+	          <?php } ?>
 			</select>
 			<br>
-			<label>Pilih file :</label>
+			<label>Nama File :</label>
 			<br>
-			<input type="tekt" name="filename">
+			<input type="tekt" name="filename" style="padding: 5px; width: 200px; margin-bottom: 10px;">
 			<br>
-			<button type="submit" name="backup">Backup</button>
+			<button type="submit" class="btn btn-info btn-sm" name="backup">Backup</button>
 		</form>
 	</div>
 	<br>
@@ -38,18 +35,14 @@
 					<th>Waktu</th>
 				</tr>
 			</thead>
-			<?php 
-				$query = mysqli_query($koneksi,"SELECT * FROM databackup");
-			?>
-			<?php 
-				while ($data = mysqli_fetch_array($query)) {
-			?>
+
+			<?php foreach ($bckp as $db) { ?>
 			<tbody>
 				<tr>
-					<td><?php echo $data['idbackup'] ?></td>
-					<td><?php echo $data['nama'] ?></td>
-					<td><?php echo $data['penyimpanan'] ?></td>
-					<td><?php echo $data['waktu'] ?></td>
+					<td><?php echo $db->idbackup ?></td>
+					<td><?php echo $db->nama ?></td>
+					<td><?php echo $db->penyimpanan ?></td>
+					<td><?php echo $db->waktu ?></td>
 				</tr>
 			</tbody>
 			<?php 

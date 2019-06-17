@@ -14,7 +14,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Halaman Utama E-Desa</title>
+    <title>Arsip Data Pengajuan</title>
   </head>
 
   <body>
@@ -33,7 +33,7 @@
         <div class="col-sm-12">
           <div class="judul">
             <br>
-            <h1 align="center">Pengajuan Surat</h1>
+            <h2 align="center"> <strong> Arsip Data Pengajuan</strong> </h1>
             <br>
           </div>
          <div style="margin-bottom:15px; margin-right: 10px;" >
