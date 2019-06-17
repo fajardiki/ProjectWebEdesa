@@ -218,6 +218,17 @@ class c_surat extends CI_Controller {
 
 		}
 
+		public function cetaksurat(){
+			$data = array(
+					'head'=>'v_header',
+					'foot'=>'v_footer',
+					'navbar'=>'v_navbar',
+				);
+
+			$this->load->view('surat/jenis_surat/v_cetak_surat',$data);
+		} 
+
+
 
 }
 ?>

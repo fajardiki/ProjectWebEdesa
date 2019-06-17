@@ -128,6 +128,7 @@
                         $scanktp = $prmhn->foto_ktp;
                         $scankk = $prmhn->foto_kk;
                         $jenis_surat = $prmhn->nama_surat;
+                        $keperluan = $prmhn->keperluan;
                       } ?>
             <div class="row">
               <div class="col-25">
@@ -156,9 +157,6 @@
               </div>
             </div>
             <div class="row">
-               <?php foreach ($permohonan as $prmhn) {
-                        $keperluan = $prmhn->keperluan;
-                      } ?>
               <div class="col-25">
                 <label for="subject">Keperluan </label>
               </div>
@@ -170,8 +168,8 @@
               <div class="col-25">
               </div>
               <div class="col-75">
-               <td> <a href="" class="btn btn-info ml-2" style="float: right; width: 75px;" >Tolak </a> </td>
-                <td> <a href="" class="btn btn-info" style="float: right; width: 75px;">Terima</a> </td>
+               <td> <a href="<?php echo base_url().'c_surat/cetaksurat/'.$wrg->nik; ?>" class="btn btn-info ml-2" style="float: right; width: 75px;" >Tolak </a> </td>
+                <td> <a href="<?php echo base_url().'c_surat/cetaksurat/'.$wrg->nik; ?>" class="btn btn-info" style="float: right; width: 75px;">Terima</a> </td>
               </div>
             </div>
           </form>

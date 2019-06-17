@@ -113,6 +113,11 @@
 			return $query;
   		}
 
+  		public function status_ditolak($nik){
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Selesai' WHERE nik= '$nik'");
+			return $query;
+  		}
+
   		public function surat_statuspengajuan($nik) {
 			$query = $this->db->query("SELECT * FROM permohonan LEFT JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE nik = '$nik'");
 			return $query;
