@@ -26,7 +26,7 @@ class c_pengaturan extends CI_Controller{
 					'navbar'=>'v_navbar',
 					'tittle'=>'edit pengumuman',
 					'side1'=>'v_editpengumuman',
-					'editP'=>$this->m_admin->editPengumuman($judul, $judul,$isi),
+					// 'editP'=>$this->m_admin->editPengumuman($judul, $judul,$isi),
 					'tittle'=>'Tambah Pengumuman',
 					'side1' => 'v_tambah_pengumuman'
 				);
