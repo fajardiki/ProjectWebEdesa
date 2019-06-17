@@ -61,8 +61,8 @@
                   <td><?php echo $tampilkan->nama_surat ?></td>
                   <td><?php echo $tampilkan->tanggal_pengajuan ?></td>
                   <td><?php echo $tampilkan->status_pengajuan ?></td>
-                  <td><a href="<?php echo base_url().'c_surat/status_selesai/'.$tampilkan->nik; ?>">Selesai</a></td>
-                  <td><a href="<?php echo base_url().'c_surat/status_proses/'.$tampilkan->nik; ?>">Batal</a></td>
+                  <td><a href="<?php echo base_url().'c_surat/status_selesai/'.$tampilkan->no_permohonan; ?>">Selesai</a></td>
+                  <td><a href="<?php echo base_url().'c_surat/status_batal/'.$tampilkan->no_permohonan; ?>">Batal</a></td>
                 </tr>
               </tbody>
               <?php 

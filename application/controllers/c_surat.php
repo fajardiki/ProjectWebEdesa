@@ -111,7 +111,7 @@ class c_surat extends CI_Controller {
 		);
 		
 		$this->load->view('surat/v_status_pengajuan',$data);
-	}
+		}
 
 
 		public function status_proses(){
@@ -125,6 +125,19 @@ class c_surat extends CI_Controller {
 			);
 		
 			$this->load->view('surat/v_status_pengajuan',$data);
+		}
+
+		public function status_batal(){
+			$nik = $this->uri->segment(3);
+			$data = array(
+			'head'=>'v_header',
+			'foot'=>'v_footer',
+			'navbar'=>'v_navbar',
+			'statuspengajuan' => $this->m_user->status_pengajuan(),
+			'batal'=>$this->m_user->status_batal($nik),
+		);
+		
+		$this->load->view('surat/v_status_pengajuan',$data);
 		}
 
 		public function status_tolak(){

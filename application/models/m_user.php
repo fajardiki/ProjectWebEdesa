@@ -77,7 +77,7 @@
 				return $query->result();
 		}
 		public function status_pengajuan() {
-			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan != 'Diajukan'");
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan != 'Diajukan' and status_pengajuan !=  'Ditolak' ");
 			return $query->result();
 		}
 		
@@ -103,18 +103,23 @@
 
 
   		public function status_proses($nik){
-  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Diproses' WHERE nik= '$nik'");
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Diproses' WHERE no_permohonan= '$nik'");
+			return $query;
+  		}
+
+  		public function status_batal($nik){
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Diajukan' WHERE no_permohonan= '$nik'");
 			return $query;
   		}
 
 
   		public function status_selesai($nik){
-  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Selesai' WHERE nik= '$nik'");
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Selesai' WHERE no_permohonan= '$nik'");
 			return $query;
   		}
 
   		public function status_ditolak($nik){
-  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Ditolak' WHERE nik = '$nik'");
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Ditolak' WHERE no_permohonan = '$nik'");
 			return $query;
   		}
 
@@ -139,7 +144,7 @@
 		}
 
 		public function suratditolak(){
-			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan='Tolak'");
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan='Ditolak'");
 			return $query->result();
 		}
 
