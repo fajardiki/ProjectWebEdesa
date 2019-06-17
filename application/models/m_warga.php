@@ -7,8 +7,13 @@
 		
 		// Login warga
 		public function getwarga() {
-			$hsl = $this->db->query('SELECT * FROM warga');
-			return $hsl;
+			$hsl = $this->db->query("SELECT * FROM warga");
+			return $hsl->result();
+		}
+
+		public function getnkkwarga() {
+			$hsl = $this->db->query("SELECT * FROM warga");
+			return $hsl->result();
 		}
 		
 		

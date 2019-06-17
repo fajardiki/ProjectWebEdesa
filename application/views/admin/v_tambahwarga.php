@@ -77,10 +77,14 @@ input[type=submit]:hover {
 
       <div class="row">
         <div class="col-25">
-          <label for="lname">NKK : </label>
+          <label for="lname">NKK </label>
         </div>
         <div class="col-75">
-          <input type="text" name="nkk" id="nkk" placeholder="nkk" autocomplete="off">
+         <select type="tekt">
+            <?php foreach ($nkk as $db) { ?>
+                <option><?php echo $db->nkk; ?></option>
+            <?php } ?>
+      </select>
         </div>
 
 
