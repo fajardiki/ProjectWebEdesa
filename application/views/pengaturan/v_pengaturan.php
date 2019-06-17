@@ -43,7 +43,7 @@
             <!-- sidebar -->
             <div class="col-sm-3 sidebar">
               <div class=" pb-2" id="sidebar">
-                <b>
+                <b> 
                 <ul class="list-group ">
                     <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengaturan/tambahpengumuman' ?>">Tambah Pengumuman </a></li>
                     <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengaturan/lihatpengumuman' ?>">Lihat Pengumuman</a></li>

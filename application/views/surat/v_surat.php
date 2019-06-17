@@ -43,7 +43,8 @@
             <table>
                 <tr> 
                   <td width="900">
-                    <legend><h1 style="color: black">Data Warga</h1></legend>
+                   
+                  <h2> <strong> Data Warga </strong> </h2>
                   </td>
                   <td>
                     <input type="text" name="input_cari" placeholder="Cari Berdasarkan Nama Warga" class="css-input form-control" style="width:250px;" autocomplete="off"> </input>

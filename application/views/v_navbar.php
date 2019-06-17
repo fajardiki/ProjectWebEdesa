@@ -129,7 +129,7 @@
 	              Fasilitas
 	            </a>
 	            <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdownMenuLink">
-	              <a class="dropdown-item" href="<?php echo base_url().'c_listsurat' ?>">Formulir pengajuan</a>
+	              <a class="dropdown-item" href="<?php echo base_url().'c_surat/listsurat' ?>">Formulir pengajuan</a>
 	              <a class="dropdown-item" href="<?php echo base_url().'c_statuspengajuan/index/'.$nik; ?>">Cek status pengajuan</a>
 	            </div>
 	          </li>

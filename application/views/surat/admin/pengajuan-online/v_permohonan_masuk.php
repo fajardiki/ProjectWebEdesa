@@ -9,14 +9,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/style_user.css' ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/bootstrap/font-awesome/css/all.min.css' ?>">
-    
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/style_user.css'?>">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Status Pengajuan</title>
+    <title>Pengajuan Online</title>
   </head>
 
   <body>
@@ -35,44 +33,45 @@
         <div class="col-sm-12">
           <div class="judul">
             <br>
-           <h2 align="center"> <strong> Status Pengajuan </strong> </h2>
+            <h2 align="center"> <strong> Pengajuan Surat </strong> </h2>
             <br>
           </div>
-          <div class="table">
+         <div style="margin-bottom:15px; margin-right: 10px;" >
+            <form action="data_pengajuan.php">
             <table class="table table-bordered">
               <thead>
-                <tr align="center"  style="background-color: skyblue;">
+                <tr style="background-color: skyblue;" align="center">
                   <th>NIK</th>
                   <th>Nama</th>
                   <th>Jenis Surat</th>
                   <th>Tanggal</th>
                   <th>Status</th>
-                  <th colspan="2">Opsi</th>
+                  <th>Opsi</th>
                 </tr>
               </thead>
-             <?php 
-                foreach ($statuspengajuan as $tampilkan) {
+ 
+              <?php foreach ($datamasuk as $tampilkan) { ?>
 
-              ?>
-              <tbody>
-                <tr>
+               <tbody>
+                <tr >
                   <td><?php echo $tampilkan->nik ?></td>
                   <td><?php echo $tampilkan->nama ?></td>
                   <td><?php echo $tampilkan->nama_surat ?></td>
                   <td><?php echo $tampilkan->tanggal_pengajuan ?></td>
                   <td><?php echo $tampilkan->status_pengajuan ?></td>
-                  <td><a href="<?php echo base_url().'c_surat/status_selesai/'.$tampilkan->no_permohonan; ?>">Selesai</a></td>
-                  <td><a href="<?php echo base_url().'c_surat/status_batal/'.$tampilkan->no_permohonan; ?>">Batal</a></td>
-                </tr>
+                  <td align="center"><a href="<?php echo base_url().'c_surat/formpengajuanadmin/'.$tampilkan->nik; ?>" class="btn btn-info btn-sm" name="btnpilih">Pilih </a></td>
               </tbody>
               <?php 
                 }
               ?>
             </table>
+            </form>
           </div>
         </div>
       </div>
     </div>
+      
+
       <!-- akhir isi -->
 
       <!-- Footer -->

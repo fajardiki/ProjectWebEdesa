@@ -28,49 +28,6 @@
       <!-- akhir navbar -->
     
       <!-- isi -->
-      <div class="container" id="isi">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="judul">
-            <br>
-            <h2 align="center"> <strong> Pengajuan Surat </strong> </h1>
-            <br>
-          </div>
-         <div style="margin-bottom:15px; margin-right: 10px;" >
-            <form action="data_pengajuan.php">
-            <table class="table table-bordered">
-              <thead>
-                <tr style="background-color: skyblue;" align="center">
-                  <th>NIK</th>
-                  <th>Nama</th>
-                  <th>Jenis Surat</th>
-                  <th>Tanggal</th>
-                  <th>Status</th>
-                  <th>Opsi</th>
-                </tr>
-              </thead>
- 
-                <?php foreach ($datamasuk as $tampilkan) {
-                     ?>
-               <tbody>
-                <tr >
-                  <td><?php echo $tampilkan->nik ?></td>
-                  <td><?php echo $tampilkan->nama ?></td>
-                  <td><?php echo $tampilkan->nama_surat ?></td>
-                  <td><?php echo $tampilkan->tanggal_pengajuan ?></td>
-                  <td><?php echo $tampilkan->status_pengajuan ?></td>
-                  <td align="center"><a href="<?php echo base_url().'c_surat/pengajuan_online/'.$tampilkan->nik; ?>" class="btn btn-info btn-sm" name="btnpilih">Pilih </a></td>
-              </tbody>
-              <?php 
-                }
-              ?>
-            </table>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-      
 
       <!-- akhir isi -->
 

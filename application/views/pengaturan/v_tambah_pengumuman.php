@@ -1,32 +1,32 @@
     <!-- isi -->
 <div class="col-sm-11 utama-isi">
 
-        <form method="post" enctype="multipart/form-data">      
-        <div class="row ml-3">
+        <form action="<?php echo base_url().'c_pengaturan/insertpengumuman' ?>" method="post" enctype="multipart/form-data">      
+            <div class="row ml-3">
 
-        <div class="row">
-        <div>
-                <div class="mb-3">
-                   <div> <b> JUDUL </b> </div>
-                </div>
-                <div class="mb-2">
-                    <div>
-                      <input type="text" name="judul" class="atur_judul form-control" style="width: 400px;">
+            <div class="row">
+                <div>
+                    <div class="mb-3">
+                       <div> <b> JUDUL </b> </div>
                     </div>
-                </div>
-                <div class="mb-3 mt-4">
-                   <div> <b> ISI PENGUMUMAN </b> </div>
-                </div>
-                <div class="mb-2">
-                    <div>
-                      <textarea name="isi_pengumuman" class="atur_isi form-control" style="width: 400px; height: 220px;"></textarea>
+                    <div class="mb-2">
+                        <div>
+                          <input type="text" name="judul" class="atur_judul form-control" style="width: 400px;">
+                        </div>
                     </div>
-                </div>
+                    <div class="mb-3 mt-4">
+                       <div> <b> ISI PENGUMUMAN </b> </div>
+                    </div>
+                    <div class="mb-2">
+                        <div>
+                          <textarea name="isi_pengumuman" class="atur_isi form-control" style="width: 400px; height: 220px;"></textarea>
+                        </div>
+                    </div>
 
-        </div> 
-        </div>
+                </div> 
+            </div>
 
-        <div class=" ml-5">
+            <div class=" ml-5">
                 <div>
                     <script type="text/javascript">
                     function PreviewImage() {
@@ -54,9 +54,8 @@
                     <div>
                       <button class="btn btn-primary mt-5" type="submit" name="upload"> Posting </button>
                     </div>
-                </div>
-                
-        </div>
+                </div>    
+            </div>
         </form>
 
       </div>

@@ -73,7 +73,7 @@
 
 		public function getnikwarga($nik) {
 			$query = $this->db->query("SELECT * FROM warga WHERE nik = '$nik'");
-				return $query;
+				return $query->result();
 		}
 
 
@@ -82,13 +82,18 @@
 				return $query->result();
 		}
 		public function status_pengajuan() {
-			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan != 'Diajukan'");
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan != 'Diajukan' and status_pengajuan !=  'Ditolak' ");
 			return $query->result();
 		}
 		
 		public function datasuratform($kode) {
 			$hsl = $this->db->query("SELECT * FROM surat WHERE kode_surat = '$kode'");
 			return $hsl;
+		}
+
+		public function show_datapengajuan($nik) {
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE nik ='$nik'");
+			return $query->result();
 		}
 
 		public function insert_pengajuan($nik, $gambarktp, $gambarkk, $keperluan, $kode_surat) {
@@ -103,13 +108,23 @@
 
 
   		public function status_proses($nik){
-  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Diproses' WHERE nik= '$nik'");
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Diproses' WHERE no_permohonan= '$nik'");
+			return $query;
+  		}
+
+  		public function status_batal($nik){
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Diajukan' WHERE no_permohonan= '$nik'");
 			return $query;
   		}
 
 
   		public function status_selesai($nik){
-  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Selesai' WHERE nik= '$nik'");
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Selesai' WHERE no_permohonan= '$nik'");
+			return $query;
+  		}
+
+  		public function status_ditolak($nik){
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Ditolak' WHERE no_permohonan = '$nik'");
 			return $query;
   		}
 
@@ -134,7 +149,7 @@
 		}
 
 		public function suratditolak(){
-			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan='Tolak'");
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan='Ditolak'");
 			return $query->result();
 		}
 
@@ -153,6 +168,24 @@
 			return $query->result();
 		}
 
+		public function insertpengumuman($nama, $isi, $fotopengumuman){
+			$editPengumuman = $this->db->query("INSERT INTO pengumuman VALUES ('', '$nama', '$isi', '$fotopengumuman', '')");	
+		}
 
+
+		public function lihatpengumuman(){
+			$query = $this->db->query("SELECT * FROM pengumuman");
+			return $query;
+		}
+
+		public function lihatfoto(){
+			$query = $this->db->query("SELECT * FROM slideshow");
+			return $query;
+		}
+
+		public function insertslide($nama, $isi, $fotoslide){
+			$query = $this->db->query("INSERT INTO slideshow VALUES ('', '$nama', '$isi', '$fotoslide', '')");
+		}
+		
 	}
 ?>
