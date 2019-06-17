@@ -13,7 +13,7 @@ class c_statuspengajuan extends CI_Controller{
 				$data = array(
 					'head'=>'v_header',
 					'foot'=>'v_footer',
-					'navbar'=>'v_navbar',
+					'navbar' => 'v_navbar',
 				);			
 			}
 			
@@ -24,14 +24,14 @@ class c_statuspengajuan extends CI_Controller{
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
-					'tittle'=>'edit pengumuman'
-					'side1' => 'v_editpengumuman'
+					'tittle'=>'edit pengumuman',
+					'side1'=>'v_editpengumuman'
+
+					'editP'=>$this->m_admin->editPengumuman($judul, $judul,$isi)
 				);
 
 			$this->load->view('admin/v_editpengumuman',$data);
 		}
 
-			
-		
-		
+					
 }

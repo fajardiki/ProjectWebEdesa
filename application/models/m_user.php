@@ -119,7 +119,7 @@
 			return $query->result();
 		}
 
-		public function suratkeluar(){
+	 	public function suratkeluar(){
 			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan='Selesai'");
 			return $query->result();
 		}
