@@ -18,7 +18,8 @@
 					'head'=>'v_header', 
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
-					'slideshow'=>$this->m_user->getslideshow()
+					'slideshow'=>$this->m_user->getslideshow(),
+					'pengumuman'=>$this->m_user->getpengumuman()
 				);
 
 				$this->load->view('v_dasbord',$data);
