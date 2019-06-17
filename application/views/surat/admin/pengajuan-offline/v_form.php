@@ -75,7 +75,7 @@
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="padding-bottom: 10px; text-align: right;"> <input class="btn btn-primary" type="submit" name="submit" autocomplete="off" value="Kirim"> </td>
+                           <td> <a href="<?php echo base_url().'c_surat/cetaksurat/'.$wrg->nik; ?>" class="btn btn-info" style="float: right; width: 75px;">Terima</a> </td>
                         </tr>
                   </table>
                 </div>
