@@ -188,7 +188,6 @@ class c_surat extends CI_Controller {
 				'keperluan' => $keperluan,
 				'ksurat' => $kodesurat,
 				'dwarga' => $this->m_user->getpengajuan($nik)
-				
 				);
 			var_dump($data);
 
