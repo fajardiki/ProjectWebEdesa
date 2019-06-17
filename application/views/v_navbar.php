@@ -54,7 +54,7 @@
 	            </div>
 	          </li>
 	          <li class="nav-item"> 
-	            <a class="nav-link" href="../pengaturan/edit_pengumuman.php">Pengaturan</a>
+	            <a class="nav-link" href="<?php echo base_url('c_pengaturan/editpengumuman')?>">Pengaturan</a>
 	          </li>
 	          <li class="nav-item"> 
 	            <a class="nav-link" href="<?php echo base_url().'c_warga' ?>">Data Warga</a>
