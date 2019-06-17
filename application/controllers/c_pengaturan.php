@@ -13,7 +13,7 @@ class c_pengaturan extends CI_Controller{
 				$data = array(
 					'head'=>'v_header',
 					'foot'=>'v_footer',
-					'navbar'=>'v_navbar',
+					'navbar' => 'v_navbar',
 				);			
 			}
 			
@@ -24,6 +24,9 @@ class c_pengaturan extends CI_Controller{
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
+					'tittle'=>'edit pengumuman',
+					'side1'=>'v_editpengumuman',
+					'editP'=>$this->m_admin->editPengumuman($judul, $judul,$isi),
 					'tittle'=>'Tambah Pengumuman',
 					'side1' => 'v_tambah_pengumuman'
 				);
@@ -67,9 +70,4 @@ class c_pengaturan extends CI_Controller{
 			$this->load->view('pengaturan/v_pengaturan',$data);
 		}
 
-
-
-			
-		
-		
 }
