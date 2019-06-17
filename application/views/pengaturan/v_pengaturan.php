@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Backup dan Restore</title>
+    <title>Pengaturan</title>
   </head>
   <body>
     <div class="container-fluid">
@@ -45,8 +45,10 @@
               <div class=" pb-2" id="sidebar">
                 <b>
                 <ul class="list-group ">
-                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/backupdb' ?>">Backup Database</a></li>
-                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/restoredb' ?>">Restore Database</a></li>
+                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengaturan/tambahpengumuman' ?>">Tambah Pengumuman </a></li>
+                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengaturan/lihatpengumuman' ?>">Lihat Pengumuman</a></li>
+                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengaturan/tambahslideshow' ?>">Tambah Foto Slideshow</a></li>
+                    <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengaturan/lihatfoto' ?>">Lihat Foto</a></li>
                 </ul>
                 </b>
               </div>
@@ -56,12 +58,16 @@
         
               <div class="col-sm-9 isi_sbar ">
                   <ul class="list-group">
-                      <li class="list-group-item" style="height: 100%;">
+                      <li class="list-group-item " style="height: 100%;">
                       <?php 
-                          if (isset($side8)) {
-                              $this->load->view('pengarsipan/backuprestore/'.$side8);
-                          } else {
-                              $this->load->view('pengarsipan/backuprestore/'.$side9);
+                          if (isset($side1)) {
+                              $this->load->view('pengaturan/'.$side1);
+                          } elseif (isset($side2)) {
+                              $this->load->view('pengaturan/'.$side2);
+                          } elseif (isset($side3)) {
+                              $this->load->view('pengaturan/'.$side3);
+                          } else{
+                              $this->load->view('pengaturan/'.$side4);
                           }
                       ?>
                       </li>
@@ -69,7 +75,6 @@
               </div>
       </div>
     </div>
-    <br>
 
         <!-- akhir isi sidebar -->
 

@@ -39,7 +39,8 @@ class c_warga extends CI_Controller {
 				'foot'=>'v_footer',
 				'navbar'=>'v_navbar',
 				'tittle' => 'Tambah Warga Baru',
-				'wrg' => 'v_tambahwarga'
+				'wrg' => 'v_tambahwarga',
+				'nkk' => $this->m_warga->getnkkwarga()
 			);
 		$this->load->view('admin/v_datawarga',$data);
 	}

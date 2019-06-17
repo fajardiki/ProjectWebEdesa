@@ -16,7 +16,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Halaman Utama E-Desa</title>
+  <title>Pengajuan Offline - Pilih Warga</title>
   </head>
 
   <body>
@@ -79,7 +79,7 @@
               <td><?php echo $tampilkan->nama ?></td>
               <td><?php echo $tampilkan->tempat_lahir ?></td>
               <td><?php echo $tampilkan->tanggal_lahir ?></td>
-              <td align="center"><a href="<?php echo base_url().'c_surat/pilih_data_warga/'.$tampilkan->nik; ?>" class="btn btn-info btn-sm" name="btnpilih">Pilih </a></td>
+              <td align="center"><a href="<?php echo base_url().'c_surat/pilih_data_warga/'.$kode_surat.'/'.$tampilkan->nik; ?>" class="btn btn-info btn-sm" name="btnpilih">Pilih </a></td>
             </tr>
           </tbody>
           <?php 

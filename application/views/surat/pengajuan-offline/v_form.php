@@ -14,7 +14,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Halaman Utama E-Desa</title>
+    <title>Pengajuan Offline - Daftar Surat</title>
   </head>
 
   <body>
@@ -40,23 +40,34 @@
         
         <div>
 
-             <?php foreach ($warga as $tampilkan) {
-                     ?>
-            <form action="" method="POST" enctype="multipart/form-data"> 
+            <form action="<?php echo base_url().'c_surat/uploudpengajuanoffline' ?>" method="POST" enctype="multipart/form-data"> 
             <div>
                 <div align="center">
                     <table>
+                      <?php foreach ($warga->result_array() as $wrg) {
+                        $namawarga = $wrg['nama'];
+                        $nik = $wrg['nik'];
+                      } ?>
                         <tr>
                             <td style="padding-bottom: 10px;"> <label for="lname">Nama </label> </td>
-                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="nama" id="nama" value="<?php echo $tampilkan->nama; ?>" autocomplete="off" class="css-input form-control" style="width:250px;"> </td>
+                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="nama" id="nama" value="<?php echo $namawarga; ?>" autocomplete="off" class="css-input form-control" style="width:250px;"> </td>
                         </tr>
                         <tr>
                             <td style="padding-bottom: 10px;"> <label for="country">NIK </label> </td>
-                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="nik" id="nik" value="<?php echo $tampilkan->nik ?>" autocomplete="off" class="css-input form-control" style="width:250px;"> </td>
+                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="nik" id="nik" value="<?php echo $nik; ?>" autocomplete="off" class="css-input form-control" style="width:250px;"> </td>
                         </tr>
+                        <?php foreach ($kodesurat->result_array() as $ks) {
+                          $namasurat = $ks['nama_surat'];
+                          $kodesurat = $ks['kode_surat'];
+                        } ?>
+
+                        <div class="col-75" hidden="true">
+                          <input type="text" name="ksurat" id="nama" value="<?php echo $kodesurat; ?>" autocomplete="off">
+                        </div>
+                        
                         <tr>
                             <td style="padding-bottom: 10px;"> <label for="subject">Jenis surat </label> </td>
-                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="jenis" id="umur" value="" autocomplete="off" class="css-input form-control" style="width:250px;"></td>
+                            <td style="padding-bottom: 10px; padding-left: 30px;"> <input type="text" name="jenis" id="umur" value="<?php echo $namasurat; ?>" autocomplete="off" class="css-input form-control" style="width:250px;"></td>
                         </tr>
                         <tr>
                             <td style="padding-bottom: 10px;"> <label for="subject">Keperluan </label> </td>
@@ -70,9 +81,6 @@
                 </div>
             </div>
             </form>
-            <?php 
-          } 
-          ?>
 
         </div>
       

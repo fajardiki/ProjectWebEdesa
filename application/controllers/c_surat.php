@@ -49,10 +49,12 @@ class c_surat extends CI_Controller {
 
 		#menampilkan nama surat
 		public function surat() {
+			$ks = $this->uri->segment(3);
 			$data = array(
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
+					'kode_surat'=>$ks,
 					'surat' => $this->m_user->tampilkan_surat()
 				);
 			$this->load->view('surat/v_surat',$data);
@@ -62,13 +64,14 @@ class c_surat extends CI_Controller {
 
 		#form daftar surat
 		public function pilih_data_warga(){
+			$ks = $this->uri->segment(3);
+			$nik = $this->uri->segment(4);
 			$data = array(
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
-					'warga' => $this->m_user->tampilkan_datawarga(),
-					'warga2' => $this->m_user->surat_fasilitas_offline(),
-
+					'kodesurat' => $this->m_user->datasuratform($ks),
+					'warga'=> $this->m_user->getnikwarga($nik)
 				);
 
 			$this->load->view('surat/pengajuan-offline/v_form',$data);
@@ -173,6 +176,22 @@ class c_surat extends CI_Controller {
 
 			}
 			return $this->upload->data('file_name');
+		}
+
+		public function uploudpengajuanoffline() {
+			$nik = $this->input->post('nik');
+			$keperluan = $this->input->post('keperluan');
+			$kodesurat = $this->input->post('ksurat');
+
+			// $this->m_user->insert_pengajuan_offline($nik, $keperluan, $kodesurat);
+			$data = array(
+				'keperluan' => $keperluan,
+				'ksurat' => $kodesurat,
+				'dwarga' => $this->m_user->getpengajuan($nik)
+				
+				);
+			var_dump($data);
+
 		}
 
 

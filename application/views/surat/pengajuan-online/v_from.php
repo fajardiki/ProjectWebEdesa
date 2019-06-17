@@ -14,7 +14,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Halaman Utama E-Desa</title>
+    <title>Daftar Surat</title>
 
     <style>
      * {
@@ -105,7 +105,7 @@
         <div class="col-sm-12">
           <div class="judul">
             <br>
-            <h1 align="center">Daftar Surat</h1>
+            <h2 align="center"> <strong> Daftar Surat </strong> </h1>
             <br>
           </div>
           <form action="<?php echo base_url().'c_surat/uploudpengajuan' ?>" method="POST" enctype="multipart/form-data">

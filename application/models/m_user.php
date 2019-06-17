@@ -68,7 +68,7 @@
 
 		public function getnikwarga($nik) {
 			$query = $this->db->query("SELECT * FROM warga WHERE nik = '$nik'");
-				return $query->result();
+				return $query;
 		}
 
 
@@ -80,7 +80,6 @@
 			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN warga ON permohonan.nik = warga.nik INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE status_pengajuan != 'Diajukan'");
 			return $query->result();
 		}
-
 		
 		public function datasuratform($kode) {
 			$hsl = $this->db->query("SELECT * FROM surat WHERE kode_surat = '$kode'");
@@ -89,6 +88,11 @@
 
 		public function insert_pengajuan($nik, $gambarktp, $gambarkk, $keperluan, $kode_surat) {
     		$hsl = $this->db->query("INSERT INTO permohonan VALUES('$nik','','','','$gambarktp','$gambarkk','$keperluan','$kode_surat','admin','Diajukan')");
+    		return $hsl;
+  		}
+
+  		public function insert_pengajuan_offline($nik, $keperluan, $kodesurat) {
+  			$hsl = $this->db->query("INSERT INTO permohonan VALUES('$nik','','','','','','$keperluan','$kode_surat','admin','Diajukan')");
     		return $hsl;
   		}
 
@@ -133,6 +137,10 @@
 			$query = $this->db->query("UPDATE warga SET avatar='$fotoprofile' WHERE nik= '$nik'");
 			return $query;
 		}
+
+
+		public function getpengajuan($nik) {
+			$query = $this->db->query("SELECT * FROM warga LEFT JOIN kartu_keluarga ON warga.nkk = kartu_keluarga.nkk LEFT JOIN kode_pos ON kartu_keluarga.kode_pos = kode_pos.kode_pos WHERE warga.nik='$nik'");
 
 		public function databackup(){
 			$query = $this->db->query("SELECT * FROM databackup");

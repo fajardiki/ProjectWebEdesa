@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Halaman Utama E-Desa</title>
+    <title>Arsip Surat Pengajuan</title>
   </head>
   <body>
     <div class="container-fluid">
@@ -43,11 +43,13 @@
             <!-- sidebar -->
             <div class="col-sm-3 sidebar">
               <div class=" pb-2" id="sidebar">
-                 <ul class="list-group ">
+                <b>
+                <ul class="list-group ">
                     <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/arsip_suratmasuk' ?>">Surat Masuk </a></li>
                     <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/arsip_suratkeluar' ?>">Surat Keluar</a></li>
                     <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/arsip_suratditolak' ?>">Surat Ditolak</a></li>
                 </ul>
+                </b>
               </div>
             </div>
             <!-- isi sidebar -->
