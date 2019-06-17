@@ -144,13 +144,13 @@
       <div class="row">
         <div class="col-25">
         </div>
-        <div class="col-75">
-          <button  type="submit" name="submit" class="btn btn-primary" style="float: right;">Tambahkan</button>
+
+        <div class="col-75" style="padding-top: 10px;">
+          <button  type="submit" name="submit" class="btn btn-info" style="float: right;">Tambahkan</button>
         </div>
       </div>
     </form>
   </div>
-  <br>
 
   <!-- Akhir form -->
 </body>

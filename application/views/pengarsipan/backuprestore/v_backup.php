@@ -17,7 +17,7 @@
 	          <?php } ?>
 			</select>
 			<br>
-			<label>Pilih file :</label>
+			<label>Nama File :</label>
 			<br>
 			<input type="tekt" name="filename" style="padding: 5px; width: 200px; margin-bottom: 10px;">
 			<br>

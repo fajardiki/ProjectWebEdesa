@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Halaman Utama E-Desa</title>
+    <title>Arsip Dokumentasi Kegiatan</title>
   </head>
   <body>
     <div class="container-fluid">
@@ -43,12 +43,14 @@
             <!-- sidebar -->
             <div class="col-sm-3 sidebar">
               <div class=" pb-2" id="sidebar">
-                 <ul class="list-group ">
+                <b>
+                <ul class="list-group ">
                     <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/hutdesa' ?>">HUT Desa</a></li>
                     <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/rapat_bulanan' ?>">Rapat Bulanan</a></li>
                     <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/lomba_agustusan' ?>">Lomba Agustusan</a></li>
                     <li class="list-group-item"><a class="nav-link text-dark" href="<?php echo base_url().'c_pengarsipan/posyandu' ?>">Posyandu</a></li>
                 </ul>
+                </b>
               </div>
             </div>
             <!-- isi sidebar -->

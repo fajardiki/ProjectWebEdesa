@@ -7,7 +7,7 @@
 <body>
 	<div class="container">
 	<div align="center">
-	<img class="img-thumbnail" src="<?php base_url().'assets/img/Situbondo.jpg' ?> ?>" 
+	<img class="img-thumbnail" src="<?php base_url().'assets/img/Situbondo.jpg' ?> ?>">
 	
 	</div>
 	</div>
