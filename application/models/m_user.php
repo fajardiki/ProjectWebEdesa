@@ -114,7 +114,7 @@
   		}
 
   		public function status_ditolak($nik){
-  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Selesai' WHERE nik= '$nik'");
+  			$query = $this->db->query("UPDATE permohonan SET status_pengajuan='Ditolak' WHERE nik = '$nik'");
 			return $query;
   		}
 

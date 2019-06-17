@@ -44,9 +44,9 @@
             <div>
                 <div align="center">
                     <table>
-                      <?php foreach ($warga->result_array() as $wrg) {
-                        $namawarga = $wrg['nama'];
-                        $nik = $wrg['nik'];
+                      <?php foreach ($warga as $wrg) {
+                        $namawarga = $wrg->nama;
+                        $nik = $wrg->nik;
                       } ?>
                         <tr>
                             <td style="padding-bottom: 10px;"> <label for="lname">Nama </label> </td>

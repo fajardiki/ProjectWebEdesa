@@ -106,6 +106,7 @@ class c_surat extends CI_Controller {
 			'head'=>'v_header',
 			'foot'=>'v_footer',
 			'navbar'=>'v_navbar',
+			'statuspengajuan' => $this->m_user->status_pengajuan(),
 			'selesai'=>$this->m_user->status_selesai($nik),
 		);
 		
@@ -119,7 +120,21 @@ class c_surat extends CI_Controller {
 				'head'=>'v_header',
 				'foot'=>'v_footer',
 				'navbar'=>'v_navbar',
-				'proses'=>$this->m_user->status_diproses($nik),
+				'statuspengajuan' => $this->m_user->status_pengajuan(),
+				'proses'=>$this->m_user->status_proses($nik),
+			);
+		
+			$this->load->view('surat/v_status_pengajuan',$data);
+		}
+
+		public function status_tolak(){
+			$nik = $this->uri->segment(3);
+			$data = array(
+				'head'=>'v_header',
+				'foot'=>'v_footer',
+				'navbar'=>'v_navbar',
+				'statuspengajuan' => $this->m_user->status_pengajuan(),
+				'tolak'=>$this->m_user->status_ditolak($nik)
 			);
 		
 			$this->load->view('surat/v_status_pengajuan',$data);
@@ -222,8 +237,7 @@ class c_surat extends CI_Controller {
 			$data = array(
 					'head'=>'v_header',
 					'foot'=>'v_footer',
-					'navbar'=>'v_navbar',
-					'tolak' => $this->m_user->status_tolak()
+					'navbar'=>'v_navbar'
 				);
 
 			$this->load->view('surat/jenis_surat/v_cetak_surat',$data);
