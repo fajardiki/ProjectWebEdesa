@@ -26,7 +26,6 @@ class c_pengaturan extends CI_Controller{
 					'navbar'=>'v_navbar',
 					'tittle'=>'edit pengumuman',
 					'side1'=>'v_editpengumuman',
-					// 'editP'=>$this->m_admin->editPengumuman($judul, $judul,$isi),
 					'tittle'=>'Tambah Pengumuman',
 					'side1' => 'v_tambah_pengumuman'
 				);
@@ -40,7 +39,9 @@ class c_pengaturan extends CI_Controller{
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
 					'tittle'=>'Lihat Pengumuman',
-					'side2' => 'v_lihat_pengumuman'
+					'side2' => 'v_lihat_pengumuman',
+					'lihatpengumuman' => $this->m_user->lihatpengumuman()
+				
 				);
 
 			$this->load->view('pengaturan/v_pengaturan',$data);
@@ -58,16 +59,16 @@ class c_pengaturan extends CI_Controller{
 			$this->load->view('pengaturan/v_pengaturan',$data);
 		}
 
-		public function lihatfoto(){
+		public function lihatFoto(){
 			$data = array(
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
 					'tittle'=>'Lihat Foto',
-					'side4' => 'v_lihat_foto'
+					'side4' => 'v_lihat_foto',
+					'lihatfoto' => $this->m_user->lihatfoto()
 				);
-
-			$this->load->view('pengaturan/v_pengaturan',$data);
+				$this->load->view('pengaturan/v_pengaturan',$data);
 		}
 
 }

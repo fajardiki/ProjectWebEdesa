@@ -9,18 +9,19 @@
                         <th>Opsi</th>
                     </tr>
                 </thead>
-                
+                <?php foreach ($lihatfoto->result_array() as $lf) { ?>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td align="center"><img style="width: 150px;  " src="image_foto"></td>
-                        <td></td>
+                        <td><?php echo $lf['waktu_slideshow']; ?></td>
+                        <td><?php echo $lf['nama_slideshow']; ?></td>
+                        <td align="center"><img style="width: 150px;" src="image_foto/<?php echo $lf['gambar_slideshow']; ?>"></td>
+                        <td><?php echo $lf['keterangan_slideshow']; ?></td>
                         <td align="center">
                             <a href="delete_foto.php?id_foto" class="btn btn-info btn-sm">Delete</a>
                         </td>
                     </tr>
                 </tbody>
+                <?php } ?>
               
             </table>
         </div>

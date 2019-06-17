@@ -148,6 +148,24 @@
 			return $query->result();
 		}
 
+		public function editPengumuman($judul, $isi, $gambar){
+			$editPengumuman = $this->db->query("INSERT INTO pengumaman VALUES '', judul_pengumuman ='$judul', isi_pengumuman ='$isi', gambar_pengumuman='$gambar', ''");
+			return $editPengumuman->result_array();
+		}
 
+		public function lihatpengumuman(){
+			$query = $this->db->query("SELECT * FROM pengumuman");
+			return $query;
+		}
+
+		public function lihatfoto(){
+			$query = $this->db->query("SELECT * FROM slideshow");
+			return $query;
+		}
+
+		public function tambahSlideshow(){
+			$tambahSlideshow = $this->db->query("INSERT INTO slideshow");
+		}
+		
 	}
 ?>
