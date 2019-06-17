@@ -29,9 +29,12 @@
     
       <!-- isi -->
 
+     
               <div class="col-sm-14 isi_sbar center" style="margin-top: 10px; margin-bottom: 10px;">
+
                   <ul class="list-group">
                       <li class="list-group-item" style="height: 100%;">
+                        <!--  <a class="btn btn-info text-white" style="float: right;">Cetak</a> -->
                       <?php 
                           if (isset($side1)) {
                               $this->load->view('surat/jenis_surat/'.$side1);
