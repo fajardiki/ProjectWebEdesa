@@ -7,7 +7,7 @@
         <div class="row">
         <div>
                 <div class="mb-3">
-                   <div> <b> JUDUL </b> </div>
+                   <div> <b> NAMA FOTO </b> </div>
                 </div>
                 <div class="mb-2">
                     <div>
@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="mb-3 mt-4">
-                   <div> <b> ISI PENGUMUMAN </b> </div>
+                   <div> <b> KETERANGAN </b> </div>
                 </div>
                 <div class="mb-2">
                     <div>
