@@ -27,6 +27,11 @@
 			return $hsl;
 		}
 
+		public function getpengumuman() {
+			$hsl = $this->db->query("SELECT * FROM pengumuman");
+			return $hsl->result_array();
+		}
+
 		public function getseswarga($user) {
 			$hsl = $this->db->query("SELECT * FROM warga WHERE username = '$user'");
 			return $hsl->result_array();

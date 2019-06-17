@@ -81,91 +81,31 @@
 			<div class="row">
 				<div class="col-sm-8">
 					<ul class="list-group">
+						<?php 
+					      	foreach ($pengumuman as $p) {
+					      		$idp = $p['id_pengumuman'];
+					      		$judul = $p['judul_pengumuman'];
+					      		$isi = $p['isi_pengumuman'];
+					      		$imgp = $p['gambar_pengumuman'];
+					      		$waktu = $p['waktu_pengumuman'];
+					      ?>
 						<li class="list-group-item">
 							<div class="row">
 								<div class="col">
-									<img src="<?php echo base_url().'assets/img/desa.jpg' ?>" class="img-fluid" alt="Responsive image">
+									<img src="<?php echo base_url().'assets/img/'.$imgp ?>" class="img-fluid" alt="Responsive image">
 								</div>
 							</div>
 							<div class="row">
 								<div class="col">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									<p><?php echo $isi; ?>.</p>
 								</div>
 							</div>
 						</li>
-  						<li class="list-group-item">
-  							<div class="row">
-								<div class="col">
-									<img src="<?php echo base_url().'assets/img/desa.jpg' ?>" class="img-fluid" alt="Responsive image">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</div>
-  						</li>
-						<li class="list-group-item">
-							<div class="row">
-								<div class="col">
-									<img src="<?php echo base_url().'assets/img/desa.jpg' ?>" class="img-fluid" alt="Responsive image">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</div>
-						</li>
-						<li class="list-group-item">
-							<div class="row">
-								<div class="col">
-									<img src="<?php echo base_url().'assets/img/desa.jpg' ?>" class="img-fluid" alt="Responsive image">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</div>
-						</li>
-						<li class="list-group-item">
-							<div class="row">
-								<div class="col">
-									<img src="<?php echo base_url().'assets/img/desa.jpg' ?>" class="img-fluid" alt="Responsive image">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</div>
-						</li>
+
+						<?php } ?>
+
+
+  						
 					</ul>
 				</div>
 				<div class="col-sm-4">
