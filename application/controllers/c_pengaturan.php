@@ -1,6 +1,6 @@
 <?php 
 
-class c_statuspengajuan extends CI_Controller{
+class c_pengaturan extends CI_Controller{
 	
 	function __construct() {
 			parent::__construct();
@@ -19,17 +19,55 @@ class c_statuspengajuan extends CI_Controller{
 			
 		}
 
-		public function editpengumuman(){
+		public function tambahpengumuman(){
 			$data = array(
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
-					'tittle'=>'edit pengumuman'
-					'side1' => 'v_editpengumuman'
+					'tittle'=>'Tambah Pengumuman',
+					'side1' => 'v_tambah_pengumuman'
 				);
 
-			$this->load->view('admin/v_editpengumuman',$data);
+			$this->load->view('pengaturan/v_pengaturan',$data);
 		}
+
+		public function lihatpengumuman(){
+			$data = array(
+					'head'=>'v_header',
+					'foot'=>'v_footer',
+					'navbar'=>'v_navbar',
+					'tittle'=>'Lihat Pengumuman',
+					'side2' => 'v_lihat_pengumuman'
+				);
+
+			$this->load->view('pengaturan/v_pengaturan',$data);
+		}
+
+		public function tambahslideshow(){
+			$data = array(
+					'head'=>'v_header',
+					'foot'=>'v_footer',
+					'navbar'=>'v_navbar',
+					'tittle'=>'Tambah Slideshow',
+					'side3' => 'v_tambah_fotoslideshow'
+				);
+
+			$this->load->view('pengaturan/v_pengaturan',$data);
+		}
+
+		public function lihatfoto(){
+			$data = array(
+					'head'=>'v_header',
+					'foot'=>'v_footer',
+					'navbar'=>'v_navbar',
+					'tittle'=>'Lihat Foto',
+					'side4' => 'v_lihat_foto'
+				);
+
+			$this->load->view('pengaturan/v_pengaturan',$data);
+		}
+
+
 
 			
 		
