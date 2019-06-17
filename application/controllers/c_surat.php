@@ -23,7 +23,7 @@ class c_surat extends CI_Controller {
 		}
 
 
-		#menampilkan pengajuan_offline
+		#menampilkan pengajuan_offline admin
 		public function pengajuan_offline(){
 			$data = array(
 					'head'=>'v_header',
@@ -32,7 +32,7 @@ class c_surat extends CI_Controller {
 					'surat' => $this->m_user->surat_fasilitas_offline()
 				);
 
-			$this->load->view('surat/pengajuan-offline/v_fasilitas',$data);
+			$this->load->view('surat/admin/pengajuan-offline/v_fasilitas',$data);
 		} 
 
 		#menampilkan pengajuan_onlie
@@ -44,7 +44,7 @@ class c_surat extends CI_Controller {
 					'datamasuk' => $this->m_user->surat_fasilitas_online()
 				);
 
-			$this->load->view('surat/pengajuan-online/v_permohonan_masuk',$data);
+			$this->load->view('surat/admin/pengajuan-online/v_permohonan_masuk',$data);
 		} 
 
 		#menampilkan nama surat
@@ -60,6 +60,17 @@ class c_surat extends CI_Controller {
 
 		}
 
+		public function listsurat() {
+			$data = array(
+					'head'=>'v_header',
+					'foot'=>'v_footer',
+					'navbar'=>'v_navbar',
+					'surat'=>$this->m_user->surat_fasilitas_offline()
+			);
+
+		$this->load->view('surat/warga/pengajuan-online/v_listsurat',$data);
+	}
+
 		#form daftar surat
 		public function pilih_data_warga(){
 			$data = array(
@@ -71,9 +82,8 @@ class c_surat extends CI_Controller {
 
 				);
 
-			$this->load->view('surat/pengajuan-offline/v_form',$data);
+			$this->load->view('surat/admin/pengajuan-offline/v_form',$data);
 		} 
-
 
 
 		public function status_pengajuan(){
@@ -100,19 +110,19 @@ class c_surat extends CI_Controller {
 	}
 
 
-	public function status_proses(){
-		$nik = $this->uri->segment(3);
-		$data = array(
-			'head'=>'v_header',
-			'foot'=>'v_footer',
-			'navbar'=>'v_navbar',
-			'proses'=>$this->m_user->status_diproses($nik),
-		);
+		public function status_proses(){
+			$nik = $this->uri->segment(3);
+			$data = array(
+				'head'=>'v_header',
+				'foot'=>'v_footer',
+				'navbar'=>'v_navbar',
+				'proses'=>$this->m_user->status_diproses($nik),
+			);
 		
-		$this->load->view('surat/v_status_pengajuan',$data);
-	}
+			$this->load->view('surat/v_status_pengajuan',$data);
+		}
 
-		public function formpengajuan() {
+		public function formpengajuanwarga() {
 			$kdsurat = $this->uri->segment(3);
 			$data = array(
 					'head'=>'v_header',
@@ -121,7 +131,7 @@ class c_surat extends CI_Controller {
 					'nik' =>$this->m_user->datasuratform($kdsurat)
 				);
 
-			$this->load->view('surat\pengajuan-online\v_from',$data);
+			$this->load->view('surat/warga/pengajuan-online/v_from',$data);
 		}
 
 		public function uploudpengajuan() {

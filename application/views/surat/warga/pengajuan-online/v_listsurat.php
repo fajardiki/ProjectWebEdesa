@@ -45,7 +45,7 @@
                       <tr>
                         <td style="text-align: center;"> <?php echo $tampilkan->kode_surat ?> </td>
                         <td>
-                          <a href="<?php echo base_url().'c_surat/formpengajuan/'.$tampilkan->kode_surat; ?>">
+                          <a href="<?php echo base_url().'c_surat/formpengajuanwarga/'.$tampilkan->kode_surat; ?>">
                             <?php echo $tampilkan->nama_surat ?> 
                           </a>
                        </td>
