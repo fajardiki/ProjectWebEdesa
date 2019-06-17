@@ -11,16 +11,15 @@ class c_pengarsipan extends CI_Controller {
 		}
 
 		public function index() {
-			if (!$this->session->userdata('username')) {
-				$this->load->view('v_login');
-			} else {
-				$data = array(
-					'head'=>'v_header',
-					'foot'=>'v_footer',
-					'navbar'=>'v_navbar',
-				);			
-			}
-			
+		$data = array(
+				'head'=>'v_header',
+				'foot'=>'v_footer',
+				'navbar'=>'v_navbar',
+				'tittle' => 'Arsip Dokumentasi Kegiatan',
+				'side1' => 'v_hutdesa'
+			);
+
+		$this->load->view('pengarsipan/v_arsip_dokumentasi_kegiatan',$data);
 		}
 
 
@@ -69,6 +68,7 @@ class c_pengarsipan extends CI_Controller {
 			);
 		$this->load->view('pengarsipan/v_arsip_dokumentasi_kegiatan',$data);
 		}
+
 
 		public function arsip_datapengajuan() {
 		$data = array(
@@ -130,7 +130,8 @@ class c_pengarsipan extends CI_Controller {
 				'navbar'=>'v_navbar',
 				'tittle' => 'Backup',
 				'side8' => 'v_backup',
-				'show' => $this->m_user->showdb()
+				'show' => $this->m_user->showdb(),
+				'bckp' => $this->m_user->databackup()
 				
 				
 			);

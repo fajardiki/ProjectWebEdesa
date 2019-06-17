@@ -125,33 +125,50 @@ class c_surat extends CI_Controller {
 		}
 
 		public function uploudpengajuan() {
-			$data = array(
-				'nama' => $this->input->post('nama'),
-				'nik' => $this->input->post('nik'),
-				'jenis' => $this->input->post('jenis'),
-				'keperluan' => $this->input->post('keperluan')
-			);
+
+			$nik = $this->input->post('nik');
+			$keperluan = $this->input->post('keperluan');
+			$kode_surat = $this->input->post('ksurat');
 
 			if (!empty($_FILES['gambarktp']['name'])) {
 				$upload = $this->_do_upload();
-				$data['gambarktp'] = $upload;
-
+				$gambarktp = $upload;
 			}
 
-			//var_dump($data);
-			$this->load->view('warga\v_statuspengajuan');
+			if (!empty($_FILES['gambarkk']['name'])) {
+				$upload = $this->_upload_do();
+				$gambarkk = $upload;
+			}
+
+			// var_dump($nik, $gambarktp, $gambarkk, $keperluan, $kode_surat);
+			$this->m_user->insert_pengajuan($nik, $gambarktp, $gambarkk, $keperluan, $kode_surat);
+			redirect('c_statuspengajuan');
 		}
 
 		private function _do_upload() {
-			$config['upload_path'] = 'assets/images/';
+			$config['upload_path'] = 'assets/img/';
 			$config['allowed_types'] = 'gif|jpg|png';
 			$config['max_size'] = 100;
 			$config['max_widht'] = 1000;
 			$config['max_height'] = 1000;
-			$config['file_name'] = round(microtime(true)*1000);
 	 
 			$this->load->library('upload', $config);
 			if (!$this->upload->do_upload('gambarktp')) {
+				$this->session->set_flashdata('msg', $this->upload->display_errors('',''));
+
+			}
+			return $this->upload->data('file_name');
+		}
+
+		private function _upload_do() {
+			$config['upload_path'] = 'assets/img/';
+			$config['allowed_types'] = 'gif|jpg|png';
+			$config['max_size'] = 100;
+			$config['max_widht'] = 1000;
+			$config['max_height'] = 1000;
+	 
+			$this->load->library('upload', $config);
+			if (!$this->upload->do_upload('gambarkk')) {
 				$this->session->set_flashdata('msg', $this->upload->display_errors('',''));
 
 			}

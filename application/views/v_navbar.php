@@ -12,7 +12,7 @@
 			$avatar = $ad['avatar'];
 		} ?>
 
-	    <nav class="navbar navbar-expand-md bg-warning navbar-light" id="navbar">
+	    <nav class="navbar navbar-expand-md bg-warning navbar-light" id="navbar" style="border-radius: 4px;">
 	      <!-- Brand -->
 	      <a class="navbar-brand" align="" href="<?php echo base_url().'c_dasbord' ?>">E-DESA</a>
 	      
@@ -158,7 +158,7 @@
 	            		</div>
 	            	</div>
 	            	
-	              <a class="dropdown-item" href="<?php echo base_url().'c_editprofil' ?>">Edit profil</a>
+	              <a class="dropdown-item" href="<?php echo base_url().'c_editprofile' ?>">Edit profil</a>
 	              <a class="dropdown-item" href="<?php echo base_url().'c_logout'; ?>">Log out</a>
 	            </div>
 	        </ul>

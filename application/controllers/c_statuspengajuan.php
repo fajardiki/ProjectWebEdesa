@@ -10,6 +10,12 @@ class c_statuspengajuan extends CI_Controller{
 	public function index()
 	{
 		$nik = $this->uri->segment(3);
+
+		$nama = $this->session->userdata('user');
+	  	foreach ($nama as $us) {
+	  		$nik = $us['nik'];
+	  	}
+
 		$data = array(
 			'head'=>'v_header',
 			'foot'=>'v_footer',
