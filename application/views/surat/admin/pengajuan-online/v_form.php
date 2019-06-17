@@ -103,12 +103,16 @@
           </div>
           <form action="" method="POST" enctype="multipart/form-data">
             <div class="row">
+                  <?php foreach ($warga as $wrg) {
+                        $namawarga = $wrg->nama;
+                        $nik = $wrg->nik;
+                      } ?>
 
               <div class="col-25">
                 <label for="lname">Nama </label>
               </div>
               <div class="col-75">
-                <input type="text" name="nama" id="nama" value="" autocomplete="off">
+                <input type="text" name="nama" id="nama" value="<?php echo $namawarga; ?>" autocomplete="off">
               </div>
             </div>
             <div class="row">
@@ -116,15 +120,21 @@
                 <label for="country">NIK </label>
               </div>
               <div class="col-75">
-                 <input type="text" name="nik" id="nik" value="" autocomplete="off">
+                 <input type="text" name="nik" id="nik" value="<?php echo $nik; ?>" autocomplete="off">
               </div>
             </div>
+
+              <?php foreach ($permohonan as $prmhn) {
+                        $scanktp = $prmhn->foto_ktp;
+                        $scankk = $prmhn->foto_kk;
+                        $jenis_surat = $prmhn->nama_surat;
+                      } ?>
             <div class="row">
               <div class="col-25">
                 <label for="subject">Scan ktp </label>
               </div>
               <div class="col-75">
-                <input type="file" name="gambarktp">
+                <img name="gambarktp" value="<?php echo $scanktp; ?>">
               </div>
             </div>
             <div class="row">
@@ -132,32 +142,36 @@
                 <label for="subject">Scan kk </label>
               </div>
               <div class="col-75">
-                <input type="file" name="gambarkk">
+                <img name="gambarkk" value="<?php echo $scankk; ?>">
               </div>
             </div>
             <div class="row">
+
               <div class="col-25">
                 <label for="subject">Jenis surat </label>
               </div>
               <div class="col-75">
-                <input type="text" name="jenis" id="umur" value="" 
-                autocomplete="off">
+                <input type="text" name="jenis" id="umur" value="<?php echo $jenis_surat; ?>"  autocomplete="off">
                 <input type="hidden" name="ks" value="">
               </div>
             </div>
             <div class="row">
+               <?php foreach ($permohonan as $prmhn) {
+                        $keperluan = $prmhn->keperluan;
+                      } ?>
               <div class="col-25">
                 <label for="subject">Keperluan </label>
               </div>
               <div class="col-75">
-               <input type="text" name="keperluan" id="jenis_kelamin" placeholder="keperluan pengajuan ...." autocomplete="off">
+               <input type="text" name="keperluan" id="jenis_kelamin" value="<?php echo $keperluan; ?>" autocomplete="off">
               </div>
             </div>
             <div class="row">
               <div class="col-25">
               </div>
               <div class="col-75">
-                <input class="btn-primary" type="submit" value="Kirim" name="submit" autocomplete="off">
+               <td> <a href="" class="btn btn-info ml-2" style="float: right; width: 75px;" >Tolak </a> </td>
+                <td> <a href="" class="btn btn-info" style="float: right; width: 75px;">Terima</a> </td>
               </div>
             </div>
           </form>

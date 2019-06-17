@@ -68,7 +68,7 @@
 
 		public function getnikwarga($nik) {
 			$query = $this->db->query("SELECT * FROM warga WHERE nik = '$nik'");
-				return $query;
+				return $query->result();
 		}
 
 
@@ -87,8 +87,8 @@
 		}
 
 		public function show_datapengajuan($nik) {
-			$query = $this->db->query("SELECT * FROM permohonan WHERE nik ='$nik'");
-			return $query;
+			$query = $this->db->query("SELECT * FROM permohonan INNER JOIN surat ON permohonan.kode_surat = surat.kode_surat WHERE nik ='$nik'");
+			return $query->result();
 		}
 
 		public function insert_pengajuan($nik, $gambarktp, $gambarkk, $keperluan, $kode_surat) {

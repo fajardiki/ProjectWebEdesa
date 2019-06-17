@@ -143,8 +143,10 @@ class c_surat extends CI_Controller {
 					'head'=>'v_header',
 					'foot'=>'v_footer',
 					'navbar'=>'v_navbar',
-					'showdt' =>$this->m_user->show_datapengajuan($nik)
+					'permohonan' => $this->m_user->show_datapengajuan($nik),
+					'warga'=> $this->m_user->getnikwarga($nik)
 				);
+
 
 			$this->load->view('surat/admin/pengajuan-online/v_form',$data);
 		}

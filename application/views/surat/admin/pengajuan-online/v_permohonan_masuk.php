@@ -50,8 +50,8 @@
                 </tr>
               </thead>
  
-                <?php foreach ($datamasuk as $tampilkan) {
-                     ?>
+              <?php foreach ($datamasuk as $tampilkan) { ?>
+
                <tbody>
                 <tr >
                   <td><?php echo $tampilkan->nik ?></td>
