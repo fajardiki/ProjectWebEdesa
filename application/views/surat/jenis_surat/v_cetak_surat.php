@@ -29,6 +29,26 @@
     
       <!-- isi -->
 
+              <div class="col-sm-14 isi_sbar center" style="margin-top: 10px; margin-bottom: 10px;">
+                  <ul class="list-group">
+                      <li class="list-group-item" style="height: 100%;">
+                      <?php 
+                          if (isset($side1)) {
+                              $this->load->view('surat/jenis_surat/'.$side1);
+                          } elseif (isset($side2)) {
+                              $this->load->view('surat/jenis_surat/'.$side2);
+                          } elseif (isset($side3)) {
+                              $this->load->view('surat/jenis_surat/'.$side3);
+                          } elseif (isset($side4)) {
+                              $this->load->view('surat/jenis_surat/'.$side4);
+                          } else{
+                              $this->load->view('surat/jenis_surat/'.$side5);
+                          }
+                      ?>
+                      </li>
+                  </ul>
+              </div>
+
       <!-- akhir isi -->
 
       <!-- Footer -->
