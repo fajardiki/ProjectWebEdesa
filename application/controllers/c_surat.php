@@ -103,6 +103,9 @@ class c_surat extends CI_Controller {
 		public function status_selesai(){
 			$nik = $this->uri->segment(3);
 			$data = array(
+			'head'=>'v_header',
+			'foot'=>'v_footer',
+			'navbar'=>'v_navbar',
 			'statuspengajuan' => $this->m_user->status_pengajuan(),
 			'selesai'=>$this->m_user->status_selesai($nik),
 		);
@@ -114,6 +117,9 @@ class c_surat extends CI_Controller {
 		public function status_proses(){
 			$nik = $this->uri->segment(3);
 			$data = array(
+				'head'=>'v_header',
+				'foot'=>'v_footer',
+				'navbar'=>'v_navbar',
 				'statuspengajuan' => $this->m_user->status_pengajuan(),
 				'proses'=>$this->m_user->status_proses($nik),
 			);
@@ -124,6 +130,9 @@ class c_surat extends CI_Controller {
 		public function status_batal(){
 			$nik = $this->uri->segment(3);
 			$data = array(
+			'head'=>'v_header',
+			'foot'=>'v_footer',
+			'navbar'=>'v_navbar',
 			'statuspengajuan' => $this->m_user->status_pengajuan(),
 			'batal'=>$this->m_user->status_batal($nik),
 		);
@@ -134,6 +143,9 @@ class c_surat extends CI_Controller {
 		public function status_tolak(){
 			$nik = $this->uri->segment(3);
 			$data = array(
+				'head'=>'v_header',
+				'foot'=>'v_footer',
+				'navbar'=>'v_navbar',
 				'statuspengajuan' => $this->m_user->status_pengajuan(),
 				'tolak'=>$this->m_user->status_ditolak($nik)
 			);
